@@ -32,13 +32,12 @@ function Map({ latitude, longitude }: MapProps) {
 
     return () => mapScript.removeEventListener("load", onLoadKakaoMap);
   }, [latitude, longitude]);
-  console.log(process.env.NEXT_PUBLIC_KAKAOMAP_APPKEY)
 
   return (
     <>
-      <div className="map" />
+      <div id="map" className="maps"></div>
       <style jsx>{`
-        .map {
+        .maps {
           aspect-ratio: 320 / 220;
         }
       `}</style>

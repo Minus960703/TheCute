@@ -5,14 +5,16 @@ function Home({ response } :any) {
   console.log(response)
   return (
     <>
-      TheCute
+      thecute
+      <Map latitude={37.4812845080678} longitude={126.952713197762}/>
     </>
   )
 }
 
-export const getServerSideProps :GetServerSideProps = async (context) => {
-  const response = await (await fetch('http://localhost:3000/api/filteringAccommodationList')).json();
-  return { props: { response }}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await (await fetch('http://localhost:4000/api/filteringAccommodationList')).json();
+  return { props: { response } };
 }
 
 export default Home;
