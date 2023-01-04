@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/api/filteringAccommodationList",
-        destination: 'https://sg.petandbe.com/filtering/accommodation',
+        destination: 'https://pokeapi.co/api/v2/pokemon',
       },
     ];
   },
