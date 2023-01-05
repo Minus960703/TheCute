@@ -13,7 +13,8 @@ function Home({ response } :any) {
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await (await fetch('https://thecute.netlify.app/proxy/api/filteringAccommodationList')).json();
+  // const response = await (await fetch('https://thecute.netlify.app/proxy/api/filteringAccommodationList')).json();
+  const response = await (await fetch('https://pokeapi.co/api/v2/pokemon')).json();
   return { props: { response } };
 }
 
