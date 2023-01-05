@@ -5,7 +5,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/filteringAccommodationList",
+        source: "/proxy/api/filteringAccommodationList",
         destination: 'https://pokeapi.co/api/v2/pokemon',
       },
     ];

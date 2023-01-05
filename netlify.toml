@@ -4,3 +4,9 @@ publish = ".next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/proxy/*"
+  to = "https://pokeapi.co/:splat"
+  status = 200
+  force = true
