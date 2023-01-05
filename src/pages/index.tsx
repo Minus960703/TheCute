@@ -13,7 +13,7 @@ function Home({ response } :any) {
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await (await fetch('http://localhost:4000/proxy/api/filteringAccommodationList')).json();
+  const response = await (await fetch('https://thecute.netlify.app/proxy/api/filteringAccommodationList')).json();
   return { props: { response } };
 }
 
