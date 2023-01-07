@@ -1,12 +1,34 @@
 import { Map } from '../components/atoms/Map'
 import { GetServerSideProps } from 'next'
+import { SeoHead } from '../components/atoms/SeoHead'
+import { ImageFile } from '../components/atoms/ImageFile'
+import { ImageDatas } from './api/imageObject'
+import { useRouter } from 'next/router'
+import { HomeMenu } from '../components/molecules/HomeMenu'
 
 function Home({ response } :any) {
-  console.log(response)
+  const router = useRouter();
   return (
     <>
-      thecute
-      <Map latitude={37.4812845080678} longitude={126.952713197762}/>
+      <SeoHead title='더 귀여워' />
+      { router.pathname === '/' &&
+        <HomeMenu />
+      }
+      <div className='flex__area'>
+        { ImageDatas && 
+          ImageDatas.map((current)=><ImageFile imageUrl={current.imgUrl} key={current.id}/>)
+        }
+      </div>
+      {/* <ImageFile /> */}
+      <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/>
+      <style jsx>{`
+        .flex__area {
+          display: flex;
+          width: calc(100% - 48px);
+          padding: 24px 24px;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </>
   )
 }
