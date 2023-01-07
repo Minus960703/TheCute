@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import React, { ReactNode, useState } from 'react'
-import { Footer } from '../../organisms/Footer';
 import { Header } from '../../organisms/Header'
 
 interface LayOutProps {
