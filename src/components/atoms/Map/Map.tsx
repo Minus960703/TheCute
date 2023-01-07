@@ -25,7 +25,7 @@ function Map({ latitude = 37.4812845080678, longitude = 126.952713197762, addres
         const map = new window.kakao.maps.Map(container, options);
 
         var geocoder = new window.kakao.maps.services.Geocoder();
-        geocoder.addressSearch(address, function (result, status) {
+        geocoder.addressSearch(address, function (result :any, status :any) {
           if (status === window.kakao.maps.services.Status.OK) {
             var coords = new window.kakao.maps.LatLng(result[0].y, result[0].x);
             var marker = new window.kakao.maps.Marker({
