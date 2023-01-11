@@ -11,12 +11,14 @@ const ImageFile = ({ imageUrl } :ImageFileProps) => {
       <img src={imageUrl} alt="" />
       <style jsx>{`
         .item {
-          width: 25%;
+          width: calc(33.3% - 40px);
           aspect-ratio: 1/1 auto;
+          margin: 10px 20px;
+          cursor: pointer;
         }
         .item > img {
           width: 100%;
-          aspect-ratio: 1/1 auto;
+          aspect-ratio: 1/1;
           border-radius: 16px;
         }
       `}</style>

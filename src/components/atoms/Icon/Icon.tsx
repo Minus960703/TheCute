@@ -15,7 +15,7 @@ const Icon = ({ content, id, active } :IconProps) => {
         .background {
           width: 50px;
           aspect-ratio: 1/1 auto;
-          background-color: white;
+          background-color: #e7f5ff;
           border-radius: 50%;
           margin-bottom: 0.8rem;
           margin-right: 0.8rem;

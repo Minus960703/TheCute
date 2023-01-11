@@ -15,7 +15,7 @@ const Header = (props: Props) => {
           border-bottom: 1px solid #ccc;
           align-items: center;
           justify-content: flex-start;
-          background-color: transparent;
+          background-color: white;
           z-index: 4;
         }
         .header.fixed {
