@@ -1,27 +1,15 @@
 import React from 'react'
+import styles from './ImageFile.module.scss';
 
 interface ImageFileProps {
   imageUrl :string;
+  handlerModal :any;
 }
 
-const ImageFile = ({ imageUrl } :ImageFileProps) => {
-  console.log(imageUrl)
+const ImageFile = ({ imageUrl, handlerModal } :ImageFileProps) => {
   return (
-    <div className='item'>
+    <div className={styles.item} onClick={handlerModal}>
       <img src={imageUrl} alt="" />
-      <style jsx>{`
-        .item {
-          width: calc(33.3% - 40px);
-          aspect-ratio: 1/1 auto;
-          margin: 10px 20px;
-          cursor: pointer;
-        }
-        .item > img {
-          width: 100%;
-          aspect-ratio: 1/1;
-          border-radius: 16px;
-        }
-      `}</style>
     </div>
   )
 }

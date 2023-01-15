@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react'
 import { GrClose } from 'react-icons/gr'
 
-type Props = {}
+interface ModalProps {
+  handlerModal :any;
+  imgUrl :string;
+} 
 
-const Modal = (props: Props) => {
+const Modal = ({ handlerModal, imgUrl } :ModalProps) => {
+  console.log(handlerModal)
   useEffect(()=>{
     document.body.style.overflow = "hidden";
     return () => {
@@ -14,15 +18,15 @@ const Modal = (props: Props) => {
     <div>
       <div className="background"></div>
       <div className="whiteground">
-        <GrClose style={{position: 'absolute', top: '6px', right: '6px'}}/>
-        <img src='https://velog.velcdn.com/images/cjw960703/post/4cf8650e-2f9f-4924-8a1a-5e1c1fa226d4/image.jpeg' alt=""/>
+        <GrClose style={{position: 'absolute', top: '6px', right: '6px', cursor: 'pointer'}} onClick={handlerModal}/>
+        {/* <img src={} alt=""/> */}
       </div>
       <style jsx>{`
         .background {
           background-color: black;
           width: 100vw;
           height: 100vh;
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           z-index: 4;
@@ -33,7 +37,7 @@ const Modal = (props: Props) => {
           width: 60%;
           height: 60%;
           max-width: 700px;
-          position: absolute;
+          position: fixed;
           z-index: 5;
           top: 50%;
           left: 50%;

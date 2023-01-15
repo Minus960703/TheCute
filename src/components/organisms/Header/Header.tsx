@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 type Props = {}
@@ -5,7 +6,10 @@ type Props = {}
 const Header = (props: Props) => {
   return (
     <nav className='header fixed'>
-      <div>더 귀여워</div>
+      <div>
+        <Image src="/thucute.png" alt="logo" width="200" height="64"/>
+        {/* <img src="/public/" alt="" /> */}
+      </div>
       <style jsx>{`
         .header {
           display: flex;

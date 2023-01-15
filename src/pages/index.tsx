@@ -10,28 +10,27 @@ import { Modal } from '../components/organisms/Modal'
 
 function Home({ response } :any) {
   const router = useRouter();
-  const [modal, setModal] = useState(false);
-  const handlerModal = () => {
-    setModal(!modal);
+  const [modal, setModal] = useState({active: false, imgUrl: ''});
+  const handlerModal = (imgUrl :string) => {
+    setModal({...modal, active: !modal.active, imgUrl});
   }
   return (
     <>
-      <SeoHead title='더 귀여워' />
+      <SeoHead title='THE 귀여워' />
       { router.pathname === '/' &&
         <HomeMenu />
       }
       {/* <div className='flex__area' onClick={handlerModal}> */}
       <div className='flex__area'>
         { ImageDatas && 
-          ImageDatas.map((current)=><ImageFile imageUrl={current.imgUrl} key={current.id}/>)
+          ImageDatas.map((current)=><ImageFile imageUrl={current.imgUrl} key={current.id} handlerModal={()=>handlerModal(current.imgUrl)}/>)
         }
       </div>
-      {/* <ImageFile /> */}
       <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/>
-      {
-        modal &&
-          <Modal />
-      }
+      {/* {
+        modal.active &&
+          <Modal handlerModal={handlerModal} imgUrl={modal.imgUrl} />
+      } */}
       <style jsx>{`
         .flex__area {
           background-color: white;
