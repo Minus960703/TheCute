@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { DownArrow } from '../../atoms/Icons/DownArrow';
-import { UpArrow } from '../../atoms/Icons/UpArrow';
+import { DownArrowIcon } from '../../atoms/Icons/Arrow/DownArrowIcon';
+import { UpArrowIcon } from '../../atoms/Icons/Arrow/UpArrowIcon';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -12,8 +12,8 @@ const Header = () => {
         <Image src="/thucute.png" alt="logo" width="160" height="50"/>
         <h2>강아지</h2>
         {arrowBtn 
-          ? <UpArrow size={24} color={"#373F8F"} />
-          : <DownArrow size={24} color={"#373F8F"} />
+          ? <UpArrowIcon size={24} color={"#373F8F"} />
+          : <DownArrowIcon size={24} color={"#373F8F"} />
         }
       </div>
     </nav>

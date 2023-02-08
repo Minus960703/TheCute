@@ -1,7 +1,7 @@
 import React from 'react';
-import { IconProps } from '../IconType';
+import { IconProps } from '../../IconType';
 
-const DownArrow = ({color, size} : IconProps) => {
+const DownArrowIcon = ({ color = "#373F8F", size = 24 } : IconProps) => {
   return (
     <>
         <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,4 +12,4 @@ const DownArrow = ({color, size} : IconProps) => {
   )
 }
 
-export { DownArrow }
+export { DownArrowIcon }
