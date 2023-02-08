@@ -36,12 +36,11 @@ li {
 }
 
 .header {
-    display: flex;
     width: calc(100% - 32px);
     padding: var(--default-padding);
-    height: 80px;
+    height: 100px;
     border-bottom: 1px solid #ccc;
-    align-items: center;
+    /* align-items: center; */
     justify-content: flex-start;
     background-color: white;
     z-index: 4;

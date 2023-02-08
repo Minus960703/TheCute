@@ -17,9 +17,9 @@ function Home({ response } :any) {
   return (
     <>
       <SeoHead title='THE 귀여워' />
-      { router.pathname === '/' &&
+      {/* { router.pathname === '/' &&
         <HomeMenu />
-      }
+      } */}
       {/* <div className='flex__area' onClick={handlerModal}> */}
       <div className='flex__area'>
         { ImageDatas && 

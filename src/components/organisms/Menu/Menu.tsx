@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { HomeMenu } from '../../molecules/HomeMenu';
 import { LogoArea } from '../../molecules/LogoArea';
-import styles from './Header.module.scss';
+import styles from './Menu.module.scss';
 
-const Header = () => {
+const Menu = () => {
   return (
     <nav className='header fixed'>
       <LogoArea />
@@ -13,4 +13,4 @@ const Header = () => {
   )
 }
 
-export { Header }
+export { Menu }
