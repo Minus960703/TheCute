@@ -1,0 +1,12 @@
+.logo__area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &:nth-child(n) {
+        margin-right: 2rem;
+    }
+    h2 {
+        margin: 0;
+        color: #373F8F;
+    }
+}

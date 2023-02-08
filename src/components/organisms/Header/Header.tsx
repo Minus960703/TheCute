@@ -1,34 +1,21 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { DownArrow } from '../../atoms/Icons/DownArrow';
+import { UpArrow } from '../../atoms/Icons/UpArrow';
+import styles from './Header.module.scss';
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
+  const [arrowBtn, setArrowBtn] = useState(false);
   return (
     <nav className='header fixed'>
-      <div>
-        <Image src="/thucute.png" alt="logo" width="200" height="64"/>
-        {/* <img src="/public/" alt="" /> */}
+      <div className={styles.logo__area}>
+        <Image src="/thucute.png" alt="logo" width="160" height="50"/>
+        <h2>강아지</h2>
+        {arrowBtn 
+          ? <UpArrow size={24} color={"#373F8F"} />
+          : <DownArrow size={24} color={"#373F8F"} />
+        }
       </div>
-      <style jsx>{`
-        .header {
-          display: flex;
-          width: calc(100% - 48px);
-          padding: 0 24px;
-          height: 80px;
-          border-bottom: 1px solid #ccc;
-          align-items: center;
-          justify-content: flex-start;
-          background-color: white;
-          z-index: 4;
-        }
-        .header.fixed {
-          position: absolute;
-          position: sticky;
-          top: 0;
-          border-bottom: 1px solid #ccc;
-        }
-      `}</style>
     </nav>
   )
 }
