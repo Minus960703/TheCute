@@ -1,3 +1,7 @@
+:root {
+	--default-padding: 0 16px;
+}
+
 html,
 body {
 	padding: 0;
@@ -29,6 +33,24 @@ li {
 }
 .main > div {
 	margin-bottom: 1.3rem;
+}
+
+.header {
+    display: flex;
+    width: calc(100% - 32px);
+    padding: var(--default-padding);
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    z-index: 4;
+}
+.header.fixed {
+	position: absolute;
+	position: sticky;
+	top: 0;
+	border-bottom: 1px solid #ccc;
 }
 
 .home-menu {
