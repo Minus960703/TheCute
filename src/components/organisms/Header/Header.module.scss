@@ -1,12 +1,36 @@
 .logo__area {
     display: flex;
     align-items: center;
-    width: 100%;
-    &:nth-child(n) {
-        margin-right: 2rem;
-    }
+    justify-content: space-between;
+    height: 60px;
+    position: relative;
+    width: calc(100% - 32px);
+    padding: 0 16px;
     h2 {
         margin: 0;
         color: #373F8F;
+        font-size: 20px;
+    }
+    .logo {
+        width: 100%;
+        display: flex;
+        .logo__toggle {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .btn__area {
+        height: 20px;
+        transition: all .4s ease-in-out;
+    }
+    .btn__area.active {
+        transform: rotateX(180deg)
+    }
+    .btn__menu {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 25px;
+        right: 16px;
     }
 }

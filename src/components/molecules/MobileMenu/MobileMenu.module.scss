@@ -1,0 +1,12 @@
+.menu {
+  position: absoulte;
+  width: 100%;
+  top: 101px;
+  transition: all .4s ease-in-out;
+  z-index: 4;
+}
+
+.open {
+  height: 100vh;
+  background-color: #fff;
+}
