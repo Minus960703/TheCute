@@ -1,4 +1,11 @@
-const MenuList = [
+export interface MenuListProps {
+    id: number;
+    content: string;
+    active: boolean;
+    herf: string;
+}
+
+const MenuList: Array<MenuListProps> = [
     {
         id: 1,
         content: '메뉴',
