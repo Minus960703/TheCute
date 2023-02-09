@@ -1,5 +1,6 @@
 .menu {
-    width: 100%;
+    width: calc(100% - 32px);
+    padding: 0 16px;
     height: 40px;
     display: flex;
     justify-content: space-between;
