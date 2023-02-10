@@ -58,7 +58,7 @@ const test = [
 const MobileMenu = ({ menu }: MenuProps) => {
   return (
     <div className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
-      {test.map((current) => <MenuItem menu={menu} title={current.title} contents={current.contents} />)}
+      {test.map((current, index) => <MenuItem menu={menu} title={current.title} contents={current.contents} key={index} />)}
     </div>
   )
 }
