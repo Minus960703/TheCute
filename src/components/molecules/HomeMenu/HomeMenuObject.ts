@@ -2,7 +2,7 @@ export interface MenuListProps {
     id: number;
     content: string;
     active: boolean;
-    herf: string;
+    href: string;
 }
 
 const MenuList: Array<MenuListProps> = [
@@ -10,25 +10,25 @@ const MenuList: Array<MenuListProps> = [
         id: 1,
         content: '메뉴',
         active: false,
-        herf: '/menu'
+        href: '/menu'
     },
     {
         id: 2,
         content: '강아지',
         active: false,
-        herf: '/dogs'
+        href: '/dogs'
     },
     {
         id: 3,
         content: '고양이',
         active: false,
-        herf: '/cats'
+        href: '/cats'
     },
     {
         id: 4,
         content: '위치',
         active: false,
-        herf: 'location'
+        href: 'location'
     },
 ];
 

@@ -1,8 +1,60 @@
 .animal__area {
   display: flex;
   flex-wrap: wrap;
-
+  position: relative;
   h2 {
     width: 100%;
+  }
+  :nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .family {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .path {
+    span {
+      &:first-child {
+        border: 0.5px solid #373F8F;
+        width: 25%;
+        top: 25%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -25%);
+      }
+      &:nth-child(2) {
+        border: 0.5px solid #373F8F;
+        width: 25%;
+        position: absolute;
+        top: 25%;
+        left: 37.5%;
+        transform: rotate(-90deg) translate(-50%, -25%);
+      }
+      &:nth-child(3) {
+        border: 0.5px solid #373F8F;
+        width: 67.5%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+      }
+      &:nth-child(4) {
+        border: 0.5px solid #373F8F;
+        width: 7.3%;
+        position: absolute;
+        top: 45%;
+        left: 12.5%;
+        transform: rotate(-90deg) translate(-50%, -12.5%);
+      }
+      &:nth-child(5) {
+        border: 0.5px solid #373F8F;
+        width: 7.3%;
+        position: absolute;
+        top: 45%;
+        left: 80.2%;
+        transform: rotate(-90deg) translate(-50%, -80.2%);
+      }
+    }
   }
 }

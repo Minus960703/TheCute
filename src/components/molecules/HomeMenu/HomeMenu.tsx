@@ -1,10 +1,12 @@
 import { useState} from 'react';
-import { MenuList, MenuListProps } from './HomeMenuObject';
+import { MenuList } from './HomeMenuObject';
 import styles from './HomeMenu.module.scss';
 import { MenuProps } from '../../organisms/Header';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const HomeMenu = ({ menu }: MenuProps) => {
+  const router = useRouter();
   const [menuList, setMenuList] = useState([...MenuList]);
   // const isActiveMenuItem = (id: number) => {
   //   setMenuList(
@@ -20,7 +22,13 @@ const HomeMenu = ({ menu }: MenuProps) => {
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu} >
       { menuList
-        && menuList.map((current) =><Link href={current.herf}><li key={current.id}>{current.content}</li></Link>)
+        && menuList.map((current) =>
+          <Link href={current.href} key={current.content}>
+            <li key={current.content} className={router.pathname === current.href ? `${styles.active}` : ''}>
+              {current.content}
+            </li>
+          </Link>
+        )
       }
     </ul>
   )

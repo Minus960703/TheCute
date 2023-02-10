@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { BurgerIcon } from '../../atoms/BurgerIcon';
@@ -34,7 +35,9 @@ const Header = () => {
     <header className='header fixed'>
       <nav className={styles.logo__area}>
         <div className={styles.logo}>
-          <Image src="/thucute.png" alt="logo" width="160" height="50"/>
+          <Link href={'/'}>
+            <Image src="/thucute.png" alt="logo" width="160" height="50" />
+          </Link>
           <div className={styles.logo__toggle} onClick={isActiveArrowBtn} style={(menu || router.pathname !== '/') ? { display: 'none'} : {}}>
             <h2>강아지</h2>
             <div className={arrowBtn ? styles.btn__area : `${styles.btn__area} ${styles.active}`}>

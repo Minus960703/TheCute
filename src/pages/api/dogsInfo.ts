@@ -81,38 +81,42 @@ const Animal = [
 
 const Pomeranian = {
   title: '포메라니안',
-  animals: [
-    {
-      name: '밤톨',
-      age: 6,
-      birth: '2021-10-22',
-      gender: 'M'
-    },
-    {
-      name: '폼폼',
-      age: 6,
-      birth: '2021-10-22',
-      gender: 'W'
-    },
-    {
-      name: '자몽',
-      age: 3,
-      birth: '2021-10-22',
-      gender: 'W'
-    },
-    {
-      name: '버찌',
-      age: 3,
-      birth: '2021-10-22',
-      gender: 'W'
-    },
-    {
-      name: '율무',
-      age: 3,
-      birth: '2021-10-22',
-      gender: 'W'
-    }
-  ]
+  animals: {
+    parentsDogs: [
+      {
+        name: '밤톨',
+        age: 6,
+        birth: '2021-10-22',
+        gender: 'M'
+      },
+      {
+        name: '폼폼',
+        age: 6,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+    ],
+    childDogs: [
+      {
+        name: '자몽',
+        age: 3,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+      {
+        name: '버찌',
+        age: 3,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+      {
+        name: '율무',
+        age: 3,
+        birth: '2021-10-22',
+        gender: 'W'
+      }
+    ]
+  }
 }
 
 export { Animal, Pomeranian }
