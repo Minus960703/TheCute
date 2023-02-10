@@ -17,7 +17,7 @@ function Home({ response } :any) {
         <article className='banner'>
         </article>
       </section>
-      <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/>
+      {/* <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/> */}
       <style jsx>{`
         .flex__area {
           background-color: white;
