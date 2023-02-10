@@ -11,7 +11,7 @@ const MenuItem = ({ menu, title, contents }: MenuItemProps) => {
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
       <h2>{title}</h2>
-      {contents && contents.map((current, index) => <li key={index}>{current.content}</li>)}
+      {contents && contents.map((current) => <li key={current.content}>{current.content}</li>)}
     </ul>
   )
 }
