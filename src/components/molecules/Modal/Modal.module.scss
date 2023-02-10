@@ -1,7 +1,45 @@
-.btn__close {
-  position: absolute;
-  border: none;
-  background-color: transparent;
-  right: 16px;
-  top: 16px;
+.modal {
+  display: none;
+  transition: all .4s ease-in-out;
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  .background {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    // bottom: -100vh;
+    left: 0;
+    z-index: 5;
+    opacity: 0.9;
+  }
+  .whiteground {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    max-width: 700px;
+    position: fixed;
+    z-index: 6;
+    top: 5%;
+    left: 0;
+    // bottom: -100vh;
+    border-top: 1px solid #000;
+    border-radius: 16px;
+    text-align: center;
+    opacity: 1;
+    .btn__close {
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      right: 16px;
+      top: 16px;
+    }
+  } 
+}
+.open {
+  display: block;
+  position: fixed;
+  left: 0;
 }

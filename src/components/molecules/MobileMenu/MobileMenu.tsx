@@ -1,64 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MenuItem } from '../../atoms/MenuItem/MenuItem';
 import { MenuProps } from '../../organisms/Header';
+import { Modal } from '../Modal';
 import styles from './MobileMenu.module.scss';
+import { MobileMenuList } from './MobileMenuObject';
 
-const test = [
-  {
-    title: '이용안내',
-    contents: [
-      {
-        content: '이용안내'
-      }
-    ]
-  },
-  {
-    title: '메뉴',
-    contents: [
-      {
-        content: '커피'
-      },
-      {
-        content: '티'
-      },
-      {
-        content: '음료'
-      },
-      {
-        content: '기타'
-      },
-    ]
-  },
-  {
-    title: '강아지',
-    contents: [
-      {
-        content: '강아지'
-      }
-    ]
-  },
-  {
-    title: '고양이',
-    contents: [
-      {
-        content: '고양이'
-      }
-    ]
-  },
-  {
-    title: '위치',
-    contents: [
-      {
-        content: '오시는 길'
-      }
-    ]
-  }
-];
+export interface ModalProps {
+  modal: boolean;
+}
 
 const MobileMenu = ({ menu }: MenuProps) => {
+  const menuList = [...MobileMenuList];
+  const [modal, setModal] = useState(false);
   return (
     <div className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
-      {test.map((current, index) => <MenuItem menu={menu} title={current.title} contents={current.contents} key={index} />)}
+      {menuList.map((current, index) => <MenuItem menu={menu} title={current.title} contents={current.contents} key={index} />)}
+      {/* <Modal modal={modal} /> */}
     </div>
   )
 }
