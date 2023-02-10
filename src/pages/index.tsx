@@ -15,11 +15,7 @@ function Home({ response } :any) {
       <SeoHead title='THE 귀여워' />
       <section className='flex__area'>
         <article className='banner'>
-          banner
         </article>
-        {/* { ImageDatas && 
-          ImageDatas.map((current)=><ImageFile imageUrl={current.imgUrl} key={current.id} handlerModal={()=>handlerModal(current.imgUrl)}/>)
-        } */}
       </section>
       <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/>
       <style jsx>{`
