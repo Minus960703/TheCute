@@ -14,19 +14,22 @@ export interface MenuProps {
 const Header = () => {
   const router = useRouter();
   const [arrowBtn, setArrowBtn] = useState(false);
-  const [menu, setMenu]         = useState(false);
+  const [menu, setMenu] = useState(false);
+  useEffect(() => {
+    menu
+      ? document.body.style.overflow = "hidden"
+      : document.body.style.overflow = "unset"
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [menu])
   const isActiveArrowBtn = () => {
     setArrowBtn(prev => !prev);
   }
   const isActiveMenu = () => {
     setMenu(prev => !prev);
   }
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [menu])
+  
   return (
     <header className='header fixed'>
       <nav className={styles.logo__area}>

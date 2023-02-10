@@ -1,5 +1,6 @@
 import React from 'react'
 import { MenuProps } from '../../organisms/Header';
+import { Title } from '../Title';
 import styles from './MenuItem.module.scss';
 
 interface MenuItemProps extends MenuProps {
@@ -10,8 +11,8 @@ interface MenuItemProps extends MenuProps {
 const MenuItem = ({ menu, title, contents }: MenuItemProps) => {
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
-      <h2>{title}</h2>
-      {contents && contents.map((current) => <li key={current.content}>{current.content}</li>)}
+      <Title title={title} />
+      {contents && contents.map((current, index) => <li key={index}>{current.content}</li>)}
     </ul>
   )
 }
