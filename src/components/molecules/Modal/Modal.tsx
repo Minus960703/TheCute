@@ -1,24 +1,21 @@
 import React, { useEffect } from 'react'
-import { GrClose } from 'react-icons/gr'
+import { Icon } from '../../atoms/Icon';
+import styles from './Modal.module.scss';
 
-interface ModalProps {
-  handlerModal :any;
-  imgUrl :string;
-} 
-
-const Modal = ({ handlerModal, imgUrl } :ModalProps) => {
-  console.log(handlerModal)
-  useEffect(()=>{
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset"
-    }
-  },[])
+const Modal = () => {
+  // useEffect(()=>{
+  //   document.body.style.overflow = "hidden";
+  //   return () => {
+  //     document.body.style.overflow = "unset"
+  //   }
+  // },[])
   return (
-    <div>
+    <section className={styles.modal}>
       <div className="background"></div>
       <div className="whiteground">
-        <GrClose style={{position: 'absolute', top: '6px', right: '6px', cursor: 'pointer'}} onClick={handlerModal}/>
+        <button className={styles.btn__close}>
+          <Icon icon='CLOSE' />
+        </button>
         {/* <img src={} alt=""/> */}
       </div>
       <style jsx>{`
@@ -27,21 +24,22 @@ const Modal = ({ handlerModal, imgUrl } :ModalProps) => {
           width: 100vw;
           height: 100vh;
           position: fixed;
-          top: 0;
+          bottom: -100vh;
           left: 0;
-          z-index: 4;
+          z-index: 5;
           opacity: 0.9;
         }
         .whiteground {
           background-color: white;
-          width: 60%;
-          height: 60%;
+          width: 100vw;
+          height: 100vh;
           max-width: 700px;
-          position: fixed;
-          z-index: 5;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          position: absolute;
+          z-index: 6;
+          top: 5%;
+          left: 0;
+          bottom: -100vh;
+          border-top: 1px solid #000;
           border-radius: 16px;
           text-align: center;
         }
@@ -52,7 +50,7 @@ const Modal = ({ handlerModal, imgUrl } :ModalProps) => {
           border-radius: 16px;
         }
       `}</style>
-    </div>
+    </section>
   )
 }
 

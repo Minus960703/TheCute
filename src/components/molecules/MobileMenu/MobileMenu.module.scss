@@ -1,28 +1,25 @@
 .menu {
-  position: absoulte;
+  position: absolute;
   width: 100%;
-  top: 101px;
+  top: 102px;
+  left: -100%;
   transition: all .4s ease-in-out;
   z-index: 4;
   ul {
-    h2 {
-      color: #373F8F;
-      margin: 10px 0;
-    }
     &:first-child {
-      padding-top: 0;
+      padding-top: 0px;
     }
     li {
       margin: 0 8px;
       padding: 4px;
-      border-bottom: 1px solid #ccc;
       width: calc(100% - 16px - 8px);
+      border-bottom: 1px solid #ccc;
     }
   }
 }
 
 .open {
-  min-height: calc(100vh - 101px);
+  min-height: calc(100vh - 102px);
   background: white;
-  border-top: 1px solid #ccc;
+  left: 0;
 }
