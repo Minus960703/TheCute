@@ -4,9 +4,25 @@
   top: 101px;
   transition: all .4s ease-in-out;
   z-index: 4;
+  ul {
+    h2 {
+      color: #373F8F;
+      margin: 10px 0;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    li {
+      margin: 0 8px;
+      padding: 4px;
+      border-bottom: 1px solid #ccc;
+      width: calc(100% - 16px - 8px);
+    }
+  }
 }
 
 .open {
-  height: 100vh;
-  background-color: #fff;
+  min-height: calc(100vh - 101px);
+  background: white;
+  border-top: 1px solid #ccc;
 }

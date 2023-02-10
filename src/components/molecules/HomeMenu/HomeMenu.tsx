@@ -5,26 +5,23 @@ import { MenuProps } from '../../organisms/Header';
 
 const HomeMenu = ({ menu }: MenuProps) => {
   const [menuList, setMenuList] = useState([...MenuList]);
-  console.log(menuList)
-  // const isActiveMenuItem = (id: number) => {
-  //   menuList.map((prev) => {
-  //     prev.id === id
-  //       && setMenuList((prevData) => ({
-  //         ...prevData,
-  //         active: !prev.active
-  //       }));
-  //   });
-  // }
+  const isActiveMenuItem = (id: number) => {
+    setMenuList(
+      menuList.map(prev =>
+        prev.id === id
+          ? { ...prev, active: !prev.active }
+          : prev.active
+            ? { ...prev, active: !prev.active }
+            : prev
+      )
+    )
+  }
   return (
-    <>
-      { !menu 
-          &&  <ul className={styles.menu} onClick={ (e)=>console.log(e.target)}>
-                { menuList
-                    && menuList.map((current)=><li key={current.id}>{current.content}</li>)
-                }
-              </ul>
+    <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu} >
+      { menuList
+          && menuList.map((current)=><li key={current.id} onClick={()=>isActiveMenuItem(current.id)} style={ current.active ? { fontWeight: '700', color: '#373F8F' } : {}}>{current.content}</li>)
       }
-    </>
+    </ul>
   )
 }
 

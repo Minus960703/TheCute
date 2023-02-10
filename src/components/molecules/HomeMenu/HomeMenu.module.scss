@@ -1,8 +1,15 @@
 .menu {
-    width: calc(100% - 32px);
-    padding: 0 16px;
+    width: calc(100% - 48px);
+    padding: 0 24px;
     height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.open {
+    opacity: 0;
+    pointer-events: none;
 }
