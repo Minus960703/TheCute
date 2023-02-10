@@ -4,29 +4,24 @@ import styles from './HomeMenu.module.scss';
 import { MenuProps } from '../../organisms/Header';
 
 const HomeMenu = ({ menu }: MenuProps) => {
-  const [menuList, setMenuList]= useState([...MenuList]);
-  const isActiveMenuItem = ({ id = 1 }: MenuListProps) => {
-    console.log(menuList)
-    setMenuList((prev) => ({
-      ...prev,
-      active: true
-    }))
-    console.log(menuList)
-
-    // setMenuList((prev: MenuListProps) => ({
-      
-    // }))
+  const [menuList, setMenuList] = useState([...MenuList]);
+  const isActiveMenuItem = (id: number) => {
+    setMenuList(
+      menuList.map(prev =>
+        prev.id === id
+          ? { ...prev, active: !prev.active }
+          : prev.active
+            ? { ...prev, active: !prev.active }
+            : prev
+      )
+    )
   }
   return (
-    <>
-      { !menu 
-          &&  <ul className={styles.menu} onClick={isActiveMenuItem}>
-                { menuList
-                    && menuList.map((current)=><li key={current.id}>{current.content}</li>)
-                }
-              </ul>
+    <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu} >
+      { menuList
+          && menuList.map((current)=><li key={current.id} onClick={()=>isActiveMenuItem(current.id)} style={ current.active ? { fontWeight: '700', color: '#373F8F' } : {}}>{current.content}</li>)
       }
-    </>
+    </ul>
   )
 }
 

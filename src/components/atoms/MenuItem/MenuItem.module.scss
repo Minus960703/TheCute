@@ -1,0 +1,13 @@
+.menu {
+  // position: absoulte;
+  width: calc(100% - 32px);
+  padding: 16px;
+  // top: 101px;
+  transition: all .4s ease-in-out;
+  z-index: 4;
+  opacity: 0;
+}
+
+.open {
+  opacity: 1;
+}
