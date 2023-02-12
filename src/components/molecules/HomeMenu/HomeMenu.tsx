@@ -23,7 +23,7 @@ const HomeMenu = ({ menu }: MenuProps) => {
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu} >
       { menuList
         && menuList.map((current) =>
-          <Link href={current.href} key={current.content}>
+          <Link href={current.href} key={current.href}>
             <li key={current.content} className={router.pathname === current.href ? `${styles.active}` : ''}>
               {current.content}
             </li>

@@ -46,7 +46,7 @@ li {
 	justify-content: flex-start;
 	background-color: white;
 	z-index: 4;
-	transition: 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .header.fixed {
 	position: absolute;

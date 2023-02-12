@@ -10,7 +10,7 @@ const MenuList: Array<MenuListProps> = [
         id: 1,
         content: '메뉴',
         active: false,
-        href: '/menu'
+        href: '/menu/coffee'
     },
     {
         id: 2,
