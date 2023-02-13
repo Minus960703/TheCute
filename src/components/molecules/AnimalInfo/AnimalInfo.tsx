@@ -9,7 +9,7 @@ const AnimalInfo = ({ animal }: AnimalProps) => {
   return (
     <section className={styles.animal__area}>
       <Title title={animal.title} />
-      {animals.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
+      {animals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
     </section>
   )
 }

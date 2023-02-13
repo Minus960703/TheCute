@@ -4,12 +4,14 @@ const Animal = [
     animals: [
       {
         name: '슈슈',
+        file: 'syusyu',
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
       },
       {
         name: '망고',
+        file: 'mango',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
@@ -21,6 +23,7 @@ const Animal = [
     animals: [
       {
         name: '코코',
+        file: 'coco',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
@@ -32,6 +35,7 @@ const Animal = [
     animals: [
       {
         name: '로이',
+        file: 'loi',
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
@@ -43,6 +47,7 @@ const Animal = [
     animals: [
       {
         name: '뿌꾸',
+        file: 'ppukku',
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
@@ -54,12 +59,14 @@ const Animal = [
     animals: [
       {
         name: '솜',
+        file: 'som',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
       },
       {
         name: '목화',
+        file: 'moghwa',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
@@ -71,6 +78,7 @@ const Animal = [
     animals: [
       {
         name: '에디',
+        file: 'edi',
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
@@ -85,12 +93,14 @@ const Pomeranian = {
     parentsDogs: [
       {
         name: '밤톨',
+        file: 'bamtol',
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
       },
       {
         name: '폼폼',
+        file: 'pompom',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
@@ -99,18 +109,21 @@ const Pomeranian = {
     childDogs: [
       {
         name: '자몽',
+        file: 'jamong',
         age: 3,
         birth: '2021-10-22',
         gender: 'W'
       },
       {
         name: '버찌',
+        file: 'beozzi',
         age: 3,
         birth: '2021-10-22',
         gender: 'W'
       },
       {
         name: '율무',
+        file: 'yulmu',
         age: 3,
         birth: '2021-10-22',
         gender: 'W'

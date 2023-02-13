@@ -14,6 +14,7 @@ export interface AnimalProps {
 
 export interface AnimalInfoProps {
   name: string;
+  file: string;
   age: number;
   birth: string;
   gender: string;

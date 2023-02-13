@@ -22,7 +22,7 @@ const PomeranianInfo = ({ animal }: AnimalFamilyProps) => {
     <section className={styles.animal__area}>
       <Title title={animal.title} />
       <div className={styles.family}>
-        {parentsDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
+        {parentsDogs.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
       </div>
       <div className={styles.path}>
         <span></span>
@@ -32,7 +32,7 @@ const PomeranianInfo = ({ animal }: AnimalFamilyProps) => {
         <span></span>
       </div>
       <div className={styles.family}>
-        {childDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
+        {childDogs.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
       </div>
     </section>
   )
