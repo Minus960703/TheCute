@@ -14,7 +14,7 @@ const MobileMenu = ({ menu }: MenuProps) => {
   const [modal, setModal] = useState(false);
   return (
     <div className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
-      {menuList.map((current, index) => <MenuItem menu={menu} title={current.title} contents={current.contents} key={index} />)}
+      {menuList.map((current, index) => <MenuItem menu={menu} title={current.title} contents={current.contents} key={++index} />)}
       {/* <Modal modal={modal} /> */}
     </div>
   )
