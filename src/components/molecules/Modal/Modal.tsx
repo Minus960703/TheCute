@@ -1,18 +1,12 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
-import { ModalProps } from '../MobileMenu';
 import styles from './Modal.module.scss';
 
-export interface ModalOpenProps extends ModalProps {
-  openModal: () => void;
-}
-
-const Modal = React.memo(({ openModal }: ModalOpenProps) => {
+const Modal = () => {
   const { active } = useSelector((state: any) => state.modal);
-  console.log(active)
   useEffect(() => {
     active
       ? document.body.style.overflow = "hidden"
@@ -33,6 +27,6 @@ const Modal = React.memo(({ openModal }: ModalOpenProps) => {
       </div>
     </section>
   )
-});
+};
 
-export { Modal }
+export { Modal };
