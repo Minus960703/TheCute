@@ -21,18 +21,14 @@ export interface AnimalInfoProps {
 
 const dogsPage = () => {
   const animal = Animal;
-  const [modal, setModal] = useState(false);
-  const openModal = useCallback(() => {
-    setModal((prev) => !prev);
-  }, []);
+
   return (
     <>
       <section className='page__dogs'>
         <SeoHead title='THE 귀여워 | 강아지' />
-        <PomeranianInfo animal={Pomeranian} openModal={openModal}/>
-        {animal.map((current, index) => <AnimalInfo animal={current} key={index} openModal={openModal} />)}
+        <PomeranianInfo animal={Pomeranian}/>
+        {animal.map((current, index) => <AnimalInfo animal={current} key={index} />)}
       </section>
-      <Modal modal={modal} openModal={openModal} />
     </>
   )
 }

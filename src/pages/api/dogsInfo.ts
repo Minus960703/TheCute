@@ -1,22 +1,5 @@
 const Animal = [
   {
-    title: '비숑프리제',
-    animals: [
-      {
-        name: '솜',
-        age: 6,
-        birth: '2021-10-22',
-        gender: 'W'
-      },
-      {
-        name: '목화',
-        age: 6,
-        birth: '2021-10-22',
-        gender: 'W'
-      },
-    ]
-  },
-  {
     title: '스탠다드 푸들',
     animals: [
       {
@@ -27,6 +10,17 @@ const Animal = [
       },
       {
         name: '망고',
+        age: 6,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+    ]
+  },
+  {
+    title: '코카스파니엘',
+    animals: [
+      {
+        name: '코코',
         age: 6,
         birth: '2021-10-22',
         gender: 'W'
@@ -56,6 +50,23 @@ const Animal = [
     ]
   },
   {
+    title: '비숑프리제',
+    animals: [
+      {
+        name: '솜',
+        age: 6,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+      {
+        name: '목화',
+        age: 6,
+        birth: '2021-10-22',
+        gender: 'W'
+      },
+    ]
+  },
+  {
     title: '웰시코기',
     animals: [
       {
@@ -63,17 +74,6 @@ const Animal = [
         age: 6,
         birth: '2021-10-22',
         gender: 'M'
-      },
-    ]
-  },
-  {
-    title: '코카스파니엘',
-    animals: [
-      {
-        name: '코코',
-        age: 6,
-        birth: '2021-10-22',
-        gender: 'W'
       },
     ]
   },

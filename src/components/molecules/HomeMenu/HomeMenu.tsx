@@ -4,10 +4,12 @@ import styles from './HomeMenu.module.scss';
 import { MenuProps } from '../../organisms/Header';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 
 const HomeMenu = ({ menu }: MenuProps) => {
   const router = useRouter();
   const [menuList, setMenuList] = useState([...MenuList]);
+  const { active } = useSelector((state: any) => state.menu);
   // const isActiveMenuItem = (id: number) => {
   //   setMenuList(
   //     menuList.map(prev =>
@@ -20,7 +22,7 @@ const HomeMenu = ({ menu }: MenuProps) => {
   //   )
   // }
   return (
-    <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu} >
+    <ul className={active ? `${styles.menu} ${styles.open}` : styles.menu} >
       { menuList
         && menuList.map((current) =>
           <Link href={current.href} key={current.href}>

@@ -1,6 +1,7 @@
 import { createWrapper } from 'next-redux-wrapper'
 import { Action, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import modalReducer from './modalReducer';
+import menuReducer from './menuReducer';
 
 // const rootReducer = combineReducers({
 //   modalReducer,
@@ -12,6 +13,7 @@ const rootStore = () => (
   configureStore({
     reducer: {
       modal: modalReducer,
+      menu: menuReducer,
     },
   })
 )
