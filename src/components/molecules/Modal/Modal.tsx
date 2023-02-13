@@ -1,57 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
+import { ModalProps } from '../MobileMenu';
 import styles from './Modal.module.scss';
 
-const Modal = () => {
-  // useEffect(()=>{
-  //   document.body.style.overflow = "hidden";
-  //   return () => {
-  //     document.body.style.overflow = "unset"
-  //   }
-  // },[])
+export interface ModalOpenProps extends ModalProps {
+  openModal: () => void;
+}
+
+const Modal = React.memo(({ openModal }: ModalOpenProps) => {
+  const { active } = useSelector((state: any) => state.modal);
+  console.log(active)
+  useEffect(() => {
+    active
+      ? document.body.style.overflow = "hidden"
+      : document.body.style.overflow = "unset"
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [active])
+  const dispatch = useDispatch();
   return (
-    <section className={styles.modal}>
-      <div className="background"></div>
-      <div className="whiteground">
-        <button className={styles.btn__close}>
+    <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>
+      <div className={styles.background}>
+      </div>
+      <div className={styles.whiteground}>
+        <button className={styles.btn__close} onClick={() => dispatch(modalSlice.actions.open())}>
           <Icon icon='CLOSE' />
         </button>
-        {/* <img src={} alt=""/> */}
       </div>
-      <style jsx>{`
-        .background {
-          background-color: black;
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          bottom: -100vh;
-          left: 0;
-          z-index: 5;
-          opacity: 0.9;
-        }
-        .whiteground {
-          background-color: white;
-          width: 100vw;
-          height: 100vh;
-          max-width: 700px;
-          position: absolute;
-          z-index: 6;
-          top: 5%;
-          left: 0;
-          bottom: -100vh;
-          border-top: 1px solid #000;
-          border-radius: 16px;
-          text-align: center;
-        }
-        .whiteground > img {
-          width: calc(100% - 50px);
-          height: calc(100% - 50px);
-          margin: 25px;
-          border-radius: 16px;
-        }
-      `}</style>
     </section>
   )
-}
+});
 
 export { Modal }

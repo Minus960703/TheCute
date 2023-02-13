@@ -12,10 +12,11 @@ export interface AnimalFamilyProps {
       parentsDogs: AnimalInfoProps[];
       childDogs: AnimalInfoProps[];
     }
-  }
+  },
+  openModal: () => void;
 }
 
-const PomeranianInfo = ({ animal }: AnimalFamilyProps) => {
+const PomeranianInfo = ({ animal, openModal }: AnimalFamilyProps) => {
   const parentsDogs = animal.animals.parentsDogs;
   const childDogs = animal.animals.childDogs;
 
@@ -23,7 +24,7 @@ const PomeranianInfo = ({ animal }: AnimalFamilyProps) => {
     <section className={styles.animal__area}>
       <Title title={animal.title} />
       <div className={styles.family}>
-        {parentsDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name}/>)}
+        {parentsDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} openModal={openModal} />)}
       </div>
       <div className={styles.path}>
         <span></span>
@@ -33,7 +34,7 @@ const PomeranianInfo = ({ animal }: AnimalFamilyProps) => {
         <span></span>
       </div>
       <div className={styles.family}>
-        {childDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} />)}
+        {childDogs.map((current) => <AnimalImage name={current.name} age={current.age} birth={current.birth} gender={current.gender} key={current.name} openModal={openModal} />)}
       </div>
     </section>
   )
