@@ -15,6 +15,7 @@ const Modal = () => {
       document.body.style.overflow = "unset"
     }
   }, [active])
+  console.log(active)
   const dispatch = useDispatch();
   return (
     <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>

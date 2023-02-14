@@ -21,7 +21,7 @@ const Layout = ({children} :LayOutProps) => {
         {children}
       </main>
       {/* {router.pathname ==='/' && <Footer />} */}
-      {/* <Modal /> */}
+      <Modal />
     </div>
   )
 }
