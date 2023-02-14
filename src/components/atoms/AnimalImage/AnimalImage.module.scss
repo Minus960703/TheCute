@@ -1,6 +1,5 @@
 .animal {
   display: flex;
-  // width: calc(100% - 32px);
   width: calc(25% - 32px);
   padding: 0px 16px 16px;
   .info {
@@ -17,7 +16,8 @@
       width: 100%;
       aspect-ratio: 1/1 auto;
       border-radius: 50%;
-      background-color: #f1f3f5;
+      border: 1px solid #ddd;
+      // background-color: #f1f3f5;
       position: relative;
       div {
         &:first-child {

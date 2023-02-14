@@ -25,7 +25,7 @@ const dogsPage = () => {
 
   return (
     <>
-      <section className='page__dogs'>
+      <section className='pages'>
         <SeoHead title='THE 귀여워 | 강아지' />
         <PomeranianInfo animal={Pomeranian}/>
         {animal.map((current, index) => <AnimalInfo animal={current} key={index} />)}
