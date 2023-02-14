@@ -51,11 +51,11 @@ const Header = () => {
           </div>
         </div>
         <button onClick={()=>dispatch(menuSlice.actions.open())} className={styles.btn__menu}>
-          <BurgerIcon menu={menu} />
+          <BurgerIcon />
         </button>
       </nav>
       <HomeMenu menu={menu} />
-      <MobileMenu menu={menu} />
+      <MobileMenu />
     </header>
   )
 }

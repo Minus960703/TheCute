@@ -1,12 +1,11 @@
 import { useState} from 'react';
 import { MenuList } from './HomeMenuObject';
 import styles from './HomeMenu.module.scss';
-import { MenuProps } from '../../organisms/Header';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 
-const HomeMenu = ({ menu }: MenuProps) => {
+const HomeMenu = () => {
   const router = useRouter();
   const [menuList, setMenuList] = useState([...MenuList]);
   const { active } = useSelector((state: any) => state.menu);
