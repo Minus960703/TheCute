@@ -54,7 +54,7 @@ const Header = () => {
           <BurgerIcon />
         </button>
       </nav>
-      <HomeMenu menu={menu} />
+      <HomeMenu />
       <MobileMenu />
     </header>
   )
