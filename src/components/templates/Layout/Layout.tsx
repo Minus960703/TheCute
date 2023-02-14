@@ -15,7 +15,7 @@ const Layout = ({children} :LayOutProps) => {
   }
   const router = useRouter();
   return (
-    <div>
+    <div className='mobile'>
       <Header />
       <main className={router.pathname.includes('/detail') ? `main background-gray` : `main`}>
         {children}
