@@ -3,6 +3,8 @@ import { GetServerSideProps } from 'next'
 import { SeoHead } from '../components/atoms/SeoHead'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import Image from 'next/image'
+import Banner from 'public/open.jpg'
 
 function Home({ response } :any) {
   const router = useRouter();
@@ -15,6 +17,7 @@ function Home({ response } :any) {
       <SeoHead title='THE 귀여워' />
       <section className='flex__area'>
         <article className='banner'>
+          <Image src={Banner} layout='fill' alt='banner' />
         </article>
       </section>
       {/* <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/> */}

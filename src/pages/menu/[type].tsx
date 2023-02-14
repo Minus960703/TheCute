@@ -1,13 +1,14 @@
 import React from 'react'
-import { Title } from '../../components/atoms/Title';
-import { HomeMenuModal } from '../../components/molecules/HomeMenuModal';
+import { Beverage } from '../../components/molecules/Beverage';
+import { BeverageMenu } from '../../components/molecules/BeverageMenu';
 
 type Props = {}
 
 const menuPage = (props: Props) => {
   return (
     <section className='pages'>
-      
+      <BeverageMenu />
+      <Beverage />
     </section>
   )
 }
