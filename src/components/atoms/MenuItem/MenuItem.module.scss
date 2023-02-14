@@ -4,6 +4,9 @@
   transition: all .3s ease-in-out;
   z-index: 4;
   opacity: 0;
+  li {
+    cursor: pointer;
+  }
 }
 
 .open {
