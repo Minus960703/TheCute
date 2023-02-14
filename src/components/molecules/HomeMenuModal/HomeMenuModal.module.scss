@@ -4,8 +4,9 @@
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 16px;
-  position: fixed;
+  position: absolute;
   top: 50px;
+  left: 160px;
   display: none;
   flex-wrap: wrap;
   align-items: center;
@@ -15,6 +16,7 @@
     text-align: center;
     height: 50%;
     line-height: 35px;
+    cursor: pointer;
     &:first-child {
       border-bottom: 1px solid #ccc;
     }

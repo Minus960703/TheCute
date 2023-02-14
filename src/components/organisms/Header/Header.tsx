@@ -18,7 +18,7 @@ export interface MenuProps {
 
 const Header = () => {
   const router = useRouter();
-  const [arrowBtn, setArrowBtn] = useState(false);
+  const [arrowBtn, setArrowBtn] = useState({active: false, content: '강아지'});
   const { active } = useSelector((state: any)=> state.menu)
   useEffect(() => {
     active
@@ -29,8 +29,8 @@ const Header = () => {
     }
   }, [active])
   const dispatch = useDispatch();
-  const isActiveArrowBtn = () => {
-    setArrowBtn(prev => !prev);
+  const isActiveArrowBtn = (content: string = arrowBtn.content) => {
+    setArrowBtn(prev => ({ ...prev, active: !prev.active, content: content }))
   }
   
   return (
@@ -40,13 +40,13 @@ const Header = () => {
           <Link href={'/'}>
             <Image src="/thucute.png" alt="logo" width="160" height="50" onClick={active ? ()=>dispatch(menuSlice.actions.open()) : ()=>{}}/>
           </Link>
-          <div className={styles.logo__toggle} onClick={isActiveArrowBtn} style={(active || router.pathname !== '/') ? { display: 'none'} : {}}>
-            <h2>강아지</h2>
-            <div className={arrowBtn ? styles.btn__area : `${styles.btn__area} ${styles.active}`}>
+          <div className={styles.logo__toggle} onClick={()=>isActiveArrowBtn()} style={(active || router.pathname !== '/') ? { display: 'none'} : {}}>
+            <h2>{arrowBtn.content}</h2>
+            <div className={arrowBtn.active ? styles.btn__area : `${styles.btn__area} ${styles.active}`}>
               <Icon icon='ARROW' />
             </div>
-            <HomeMenuModal active={arrowBtn} />
           </div>
+          <HomeMenuModal active={arrowBtn.active} isActiveArrowBtn={isActiveArrowBtn} />
         </div>
         <button onClick={()=>dispatch(menuSlice.actions.open())} className={styles.btn__menu}>
           <BurgerIcon />
