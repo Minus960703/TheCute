@@ -1,0 +1,28 @@
+.area {
+  width: 90px;
+  height: 70px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  position: absolute;
+  top: 50px;
+  left: 160px;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  span {
+    width: 100%;
+    text-align: center;
+    height: 50%;
+    line-height: 35px;
+    cursor: pointer;
+    &:first-child {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+.open {
+  display: flex;
+}

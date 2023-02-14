@@ -17,6 +17,8 @@
         .logo__toggle {
             display: flex;
             align-items: center;
+            cursor: pointer;
+            position: relative;
         }
     }
     .btn__area {
