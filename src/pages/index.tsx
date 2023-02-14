@@ -15,14 +15,13 @@ function Home({ response } :any) {
   return (
     <>
       <SeoHead title='THE 귀여워' />
-      <section className='flex__area'>
+      <section className='home'>
         <article className='banner'>
           <Image src={Banner} layout='fill' alt='banner' />
         </article>
       </section>
-      {/* <Map address='서울특별시 마포구 어울마당로 44-1 라꼼마빌딩 2층'/> */}
       <style jsx>{`
-        .flex__area {
+        .home {
           background-color: white;
           display: flex;
           width: 100%;
