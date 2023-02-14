@@ -11,8 +11,8 @@ const AnimalImage = ({ name, file, age, birth, gender }: AnimalInfoProps) => {
   return (
     <div className={styles.animal} onClick={()=>dispatch(modalActions.open())}>
       <div className={styles.info}>
-        <div className={styles.photo}>
-          <Image src={`/profile/${file}.png`} layout="fill" alt={"profile"} />
+        <div className={styles.photo}>          
+          <Image src={`/profile/${file}.png`} layout="fill" alt={"profile"} className={styles.card} />
           <div>
             { gender === 'M'
                 ? <Icon icon='MAN' />

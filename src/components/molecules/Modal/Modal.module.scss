@@ -1,17 +1,13 @@
 .modal {
-  display: none;
+  opacity: 0;
   transition: all .3s ease-in-out;
   z-index: 6;
   position: fixed;
-  top: 0;
+  top: 100vh;
   .background {
     background-color: black;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    // bottom: -100vh;
-    left: 0;
     z-index: 5;
     opacity: 0.9;
   }
@@ -20,11 +16,10 @@
     width: 100vw;
     height: 100vh;
     max-width: 700px;
-    position: fixed;
+    position: absolute;
     z-index: 6;
-    top: 5%;
+    top: 4%;
     left: 0;
-    // bottom: -100vh;
     border-top: 1px solid #000;
     border-radius: 16px;
     text-align: center;
@@ -39,7 +34,7 @@
   } 
 }
 .open {
-  display: block;
   position: fixed;
-  left: 0;
+  top: 0;
+  opacity: 1;
 }
