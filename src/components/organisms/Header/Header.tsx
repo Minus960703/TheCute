@@ -8,6 +8,7 @@ import { menuSlice } from '../../../redux/menuReducer';
 import { BurgerIcon } from '../../atoms/BurgerIcon';
 import { Icon } from '../../atoms/Icon';
 import { HomeMenu } from '../../molecules/HomeMenu';
+import { HomeMenuModal } from '../../molecules/HomeMenuModal';
 import { MobileMenu } from '../../molecules/MobileMenu';
 import styles from './Header.module.scss';
 
@@ -44,6 +45,7 @@ const Header = () => {
             <div className={arrowBtn ? styles.btn__area : `${styles.btn__area} ${styles.active}`}>
               <Icon icon='ARROW' />
             </div>
+            <HomeMenuModal active={arrowBtn} />
           </div>
         </div>
         <button onClick={()=>dispatch(menuSlice.actions.open())} className={styles.btn__menu}>
