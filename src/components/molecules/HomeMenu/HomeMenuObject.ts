@@ -28,7 +28,7 @@ const MenuList: Array<MenuListProps> = [
         id: 4,
         content: '위치',
         active: false,
-        href: 'location'
+        href: '/location'
     },
 ];
 
