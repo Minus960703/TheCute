@@ -1,7 +1,6 @@
-import React, { useCallback, useState } from 'react'
+import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalInfo } from '../../components/molecules/AnimalInfo';
-import { Modal } from '../../components/molecules/Modal';
 import { PomeranianInfo } from '../../components/molecules/PomeranianInfo';
 import { Animal, Pomeranian } from '../api/dogsInfo';
 
@@ -18,6 +17,7 @@ export interface AnimalInfoProps {
   age: number;
   birth: string;
   gender: string;
+  point?: string[];
 }
 
 const dogsPage = () => {

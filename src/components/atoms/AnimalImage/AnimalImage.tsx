@@ -5,15 +5,17 @@ import { Icon } from '../Icon';
 import styles from './AnimalImage.module.scss';
 import * as modalActions from '../../../redux/modalReducer';
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 
-const AnimalImage = ({ name, file, age, birth, gender }: AnimalInfoProps) => {
+const AnimalImage = ({ name, file, age, birth, gender, point }: AnimalInfoProps) => {
+  const { active } = useSelector((state: any) => state.modal);
   const dispatch = useDispatch();
   return (
-    <div className={styles.animal} onClick={()=>dispatch(modalActions.open())}>
+    <div className={!active ? styles.animal : `${styles.animal} ${styles.open}`} onClick={!active ? ()=>dispatch(modalActions.open({ type: 'info', content: { name, file, age, birth, gender, point }})) : ()=>{}}>
       <div className={styles.info}>
         <div className={styles.photo}>          
           <Image src={`/profile/${file}.png`} layout="fill" alt={"profile"} className={styles.card} />
-          <div>
+          <div className={styles.gender}>
             { gender === 'M'
                 ? <Icon icon='MAN' />
                 : <Icon icon='WOMAN' />

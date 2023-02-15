@@ -2,6 +2,7 @@
   display: flex;
   width: calc(25% - 32px);
   padding: 0px 16px 16px;
+  cursor: pointer;
   .info {
     width: 100%;
     height: 100%;
@@ -26,9 +27,18 @@
           left: 5%;
         }
       }
+      .gender {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+      }
       .card {
         border-radius: 50%;
       }
     }
   }
+}
+
+.open {
+  cursor: auto;
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux';
 import { menuSlice } from '../../../redux/menuReducer';
 import * as modalActions from '../../../redux/modalReducer';
@@ -17,13 +17,16 @@ interface MenuItemProps extends MenuProps {
 
 const MenuItem = ({ menu, title, contents }: MenuItemProps) => {
   const dispatch = useDispatch();
+  const isOpenGuide = useCallback(() => {
+    dispatch(modalActions.open({ type: 'guide', content: ''}))
+  }, [])
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
       <Title title={title} />
       {contents
         && contents.map((current) => current.href
           ? <Link href={current.href} key={current.content}><li key={current.content} onClick={() => dispatch(menuSlice.actions.open())}>{current.content}</li></Link>
-          : <li key={current.content} onClick={() => dispatch(modalActions.open())}>{current.content}</li>
+          : <li key={current.content} onClick={() => isOpenGuide()}>{current.content}</li>
       )}
     </ul>
   )

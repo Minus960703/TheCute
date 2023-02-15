@@ -16,17 +16,15 @@
   .whiteground {
     background-color: white;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 4% - 50px);
     max-width: 520px;
     position: absolute;
     z-index: 6;
     top: 4%;
-    left: 0;    
-    // left: 50%;
-    // transform: translate(-50%, 0);
+    left: 0;
     border-top: 1px solid #000;
-    border-radius: 16px;
-    text-align: center;
+    border-radius: 16px 16px 0 0;
+    padding-top: 50px;
     opacity: 1;
     .btn__close {
       position: absolute;
@@ -35,6 +33,24 @@
       right: 16px;
       top: 16px;
       cursor: pointer;
+    }
+    .guide__area {
+      position: relative;
+      width: calc(100% - 50px);
+      height: calc(100% - 50px);
+      margin: 0px 25px 50px;      
+      div:first-child {
+        width: 75%;
+        margin: 0 auto;
+      }
+      .point {
+        p {
+          margin: 5px 0;
+          font-size: 24px;
+          color: #373F8F;
+          font-weight: 600;
+        }
+      }
     }
   } 
 }
