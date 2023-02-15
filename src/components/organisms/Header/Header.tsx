@@ -32,13 +32,19 @@ const Header = () => {
   const isActiveArrowBtn = (content: string = arrowBtn.content) => {
     setArrowBtn(prev => ({ ...prev, active: !prev.active, content: content }))
   }
+
+  const isOpenMenuBar = () => {
+    arrowBtn.active
+      && isActiveArrowBtn()
+    dispatch(menuSlice.actions.open());
+  }
   
   return (
     <header className='header fixed'>
       <nav className={styles.logo__area}>
         <div className={styles.logo}>
           <Link href={'/'}>
-            <Image src="/thucute.png" alt="logo" width="160" height="50" onClick={active ? ()=>dispatch(menuSlice.actions.open()) : ()=>{}}/>
+            <Image src="/thucute.png" alt="logo" width="160" height="50" onClick={active ? ()=>isOpenMenuBar() : ()=>{}}/>
           </Link>
           <div className={styles.logo__toggle} onClick={()=>isActiveArrowBtn()} style={(active || router.pathname !== '/') ? { display: 'none'} : {}}>
             <h2>{arrowBtn.content}</h2>
@@ -48,7 +54,7 @@ const Header = () => {
           </div>
           <HomeMenuModal active={arrowBtn.active} isActiveArrowBtn={isActiveArrowBtn} />
         </div>
-        <button onClick={()=>dispatch(menuSlice.actions.open())} className={styles.btn__menu}>
+        <button onClick={()=>isOpenMenuBar()} className={styles.btn__menu}>
           <BurgerIcon />
         </button>
       </nav>

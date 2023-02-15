@@ -1,10 +1,11 @@
 import React from 'react'
+import { SeoHead } from '../../components/atoms/SeoHead';
 
-type Props = {}
-
-const catsPage = (props: Props) => {
+const catsPage = () => {
   return (
-    <div>index</div>
+    <section className='pages'>
+      <SeoHead title='THE 귀여워 | 고양이' />
+    </section>
   )
 }
 

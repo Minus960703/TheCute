@@ -1,12 +1,12 @@
 import React from 'react'
+import { SeoHead } from '../../components/atoms/SeoHead';
 import { Beverage } from '../../components/molecules/Beverage';
 import { BeverageMenu } from '../../components/molecules/BeverageMenu';
 
-type Props = {}
-
-const menuPage = (props: Props) => {
+const menuPage = () => {
   return (
     <section className='pages'>
+      <SeoHead title='THE 귀여워 | 메뉴' />
       <BeverageMenu />
       <Beverage />
     </section>
