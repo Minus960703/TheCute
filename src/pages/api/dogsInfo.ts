@@ -4,7 +4,7 @@ const Animal = [
     animals: [
       {
         name: '슈슈',
-        file: 'syusyu',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/fc35c195-1975-4dfb-b583-782f9af89f6f/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'M',
@@ -12,7 +12,7 @@ const Animal = [
       },
       {
         name: '망고',
-        file: 'mango',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/9f0f23b0-a0b8-4840-a8f2-e9364f598af7/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'W',
@@ -25,7 +25,7 @@ const Animal = [
     animals: [
       {
         name: '코코',
-        file: 'coco',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/27c42627-ac20-436b-93ce-92a660306253/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'W',
@@ -38,7 +38,7 @@ const Animal = [
     animals: [
       {
         name: '로이',
-        file: 'loi',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/15e027a7-d220-4b55-a4b3-d8d9ab2b7229/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'M',
@@ -51,7 +51,7 @@ const Animal = [
     animals: [
       {
         name: '뿌꾸',
-        file: 'ppukku',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/a67819e2-ff88-4c0d-9810-ee25e460df0e/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'M',
@@ -64,7 +64,7 @@ const Animal = [
     animals: [
       {
         name: '솜',
-        file: 'som',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/93d27b70-0fb4-4cb4-985f-92859ecbf320/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'W',
@@ -72,7 +72,7 @@ const Animal = [
       },
       {
         name: '목화',
-        file: 'moghwa',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/583e3d97-2d75-43e0-9173-25a5acee49b6/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'W',
@@ -85,7 +85,7 @@ const Animal = [
     animals: [
       {
         name: '에디',
-        file: 'edi',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/3faeef19-2de7-4ce3-9df7-88514842e4b8/image.png',
         age: 6,
         birth: '2021-10-22',
         gender: 'M',
@@ -101,7 +101,7 @@ const Pomeranian = {
     parentsDogs: [
       {
         name: '밤톨',
-        file: 'bamtol',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/0d338a60-ce17-468f-ab52-7b381fb352e3/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'M',
@@ -109,7 +109,7 @@ const Pomeranian = {
       },
       {
         name: '폼폼',
-        file: 'pompom',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/84830f64-b994-4593-98e1-5e801a8e379b/image.jpg',
         age: 6,
         birth: '2021-10-22',
         gender: 'W',
@@ -119,7 +119,7 @@ const Pomeranian = {
     childDogs: [
       {
         name: '자몽',
-        file: 'jamong',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/d16ddb3d-1aa5-4492-80b0-289f6f77c7d6/image.jpg',
         age: 3,
         birth: '2021-10-22',
         gender: 'W',
@@ -127,7 +127,7 @@ const Pomeranian = {
       },
       {
         name: '버찌',
-        file: 'beozzi',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/72711264-9942-459b-9360-fb15160688b7/image.jpg',
         age: 3,
         birth: '2021-10-22',
         gender: 'W',
@@ -135,7 +135,7 @@ const Pomeranian = {
       },
       {
         name: '율무',
-        file: 'yulmu',
+        file: 'https://velog.velcdn.com/images/cjw960703/post/1c77c139-bbc9-4407-b9b8-619f08e58685/image.png',
         age: 3,
         birth: '2021-10-22',
         gender: 'W',
