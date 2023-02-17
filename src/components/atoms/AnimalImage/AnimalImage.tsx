@@ -5,7 +5,7 @@ import styles from './AnimalImage.module.scss';
 import * as modalActions from '../../../redux/modalReducer';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
-import { AnimalInfoProps } from '../../../pages/types/AnimalType';
+import { AnimalInfoProps } from '../../../types/AnimalType';
 
 const AnimalImage = ({ name, file, age, birth, gender, point }: AnimalInfoProps) => {
   const { active } = useSelector((state: any) => state.modal);

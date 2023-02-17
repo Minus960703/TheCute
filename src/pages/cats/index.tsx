@@ -3,9 +3,9 @@ import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
 import { Cats } from '../api/catsInfo';
-import { AnimalFamilyProps, AnimalInfoProps, AnimalProps } from '../types/AnimalType';
+import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../../types/AnimalType';
 
-const catsPage = ({ treeAnimal }: AnimalProps<AnimalFamilyProps<AnimalInfoProps>>) => {
+const catsPage = ({ treeAnimal }: AnimalProps<AnimalDetailProps<AnimalInfoProps>>) => {
   return (
     <section className='pages'>
       <SeoHead title='THE 귀여워 | 고양이' />

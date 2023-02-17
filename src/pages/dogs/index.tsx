@@ -4,7 +4,7 @@ import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalInfo } from '../../components/molecules/AnimalInfo';
 import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
 import { Animal, Pomeranian } from '../api/dogsInfo';
-import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../types/AnimalType';
+import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../../types/AnimalType';
 
 const dogsPage =
   (

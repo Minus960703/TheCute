@@ -12,15 +12,6 @@ export interface AnimalDetailProps<T> {
   };
 }
 
-export interface AnimalFamilyProps<T> {
-  title: string;
-  animals: {
-    parentsAnimals?: Array<T>;
-    childAnimals?: Array<T>;
-    kindAnimals?: Array<T>
-  }
-}
-
 export interface AnimalInfoProps {
   name: string;
   file: string;
