@@ -1,4 +1,3 @@
-import { Map } from '../components/atoms/Map'
 import { GetServerSideProps } from 'next'
 import { SeoHead } from '../components/atoms/SeoHead'
 import { useRouter } from 'next/router'
@@ -27,7 +26,11 @@ function Home({ response } :any) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await (await fetch('https://pokeapi.co/api/v2/pokemon')).json();
-  return { props: { response } };
+  return {
+    props: {
+      response
+    }
+  };
 }
 
 export default Home;
