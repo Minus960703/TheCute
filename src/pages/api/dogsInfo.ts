@@ -95,54 +95,56 @@ const Animal = [
   },
 ]
 
-const Pomeranian = {
-  title: '포메라니안',
-  animals: {
-    parentsDogs: [
-      {
-        name: '밤톨',
-        file: 'https://velog.velcdn.com/images/cjw960703/post/0d338a60-ce17-468f-ab52-7b381fb352e3/image.jpg',
-        age: 6,
-        birth: '2021-10-22',
-        gender: 'M',
-        point: ['애 안보고 바람피다 걸려서 땅콩수확', '#강제각성', '#더귀여워 대표미남']
-      },
-      {
-        name: '폼폼',
-        file: 'https://velog.velcdn.com/images/cjw960703/post/84830f64-b994-4593-98e1-5e801a8e379b/image.jpg',
-        age: 6,
-        birth: '2021-10-22',
-        gender: 'W',
-        point: ['애 낳기전엔 순했는데,,,(아련)', '#엄마는 강하다', '#세 자매 엄마', '#김연아 트리플 악셀']
-      },
-    ],
-    childDogs: [
-      {
-        name: '자몽',
-        file: 'https://velog.velcdn.com/images/cjw960703/post/d16ddb3d-1aa5-4492-80b0-289f6f77c7d6/image.jpg',
-        age: 3,
-        birth: '2021-10-22',
-        gender: 'W',
-        point: ['#요리뿅죠리뿅', '#뽀뽀대마왕']
-      },
-      {
-        name: '버찌',
-        file: 'https://velog.velcdn.com/images/cjw960703/post/72711264-9942-459b-9360-fb15160688b7/image.jpg',
-        age: 3,
-        birth: '2021-10-22',
-        gender: 'W',
-        point: ['#예민이', '#돼지포메', '#그만물어봐요', '#밤톨이 딸 맞음']
-      },
-      {
-        name: '율무',
-        file: 'https://velog.velcdn.com/images/cjw960703/post/1c77c139-bbc9-4407-b9b8-619f08e58685/image.png',
-        age: 3,
-        birth: '2021-10-22',
-        gender: 'W',
-        point: ['#최강 귀요미', '#엄마를 닮았네']
-      }
-    ]
+const Pomeranian = [
+  {
+    title: '포메라니안',
+    animals: [{
+      parentsAnimals: [
+        {
+          name: '밤톨',
+          file: 'https://velog.velcdn.com/images/cjw960703/post/0d338a60-ce17-468f-ab52-7b381fb352e3/image.jpg',
+          age: 6,
+          birth: '2021-10-22',
+          gender: 'M',
+          point: ['애 안보고 바람피다 걸려서 땅콩수확', '#강제각성', '#더귀여워 대표미남']
+        },
+        {
+          name: '폼폼',
+          file: 'https://velog.velcdn.com/images/cjw960703/post/84830f64-b994-4593-98e1-5e801a8e379b/image.jpg',
+          age: 6,
+          birth: '2021-10-22',
+          gender: 'W',
+          point: ['애 낳기전엔 순했는데,,,(아련)', '#엄마는 강하다', '#세 자매 엄마', '#김연아 트리플 악셀']
+        },
+      ],
+      childAnimlas: [
+        {
+          name: '자몽',
+          file: 'https://velog.velcdn.com/images/cjw960703/post/d16ddb3d-1aa5-4492-80b0-289f6f77c7d6/image.jpg',
+          age: 3,
+          birth: '2021-10-22',
+          gender: 'W',
+          point: ['#요리뿅죠리뿅', '#뽀뽀대마왕']
+        },
+        {
+          name: '버찌',
+          file: 'https://velog.velcdn.com/images/cjw960703/post/72711264-9942-459b-9360-fb15160688b7/image.jpg',
+          age: 3,
+          birth: '2021-10-22',
+          gender: 'W',
+          point: ['#예민이', '#돼지포메', '#그만물어봐요', '#밤톨이 딸 맞음']
+        },
+        {
+          name: '율무',
+          file: 'https://velog.velcdn.com/images/cjw960703/post/1c77c139-bbc9-4407-b9b8-619f08e58685/image.png',
+          age: 3,
+          birth: '2021-10-22',
+          gender: 'W',
+          point: ['#최강 귀요미', '#엄마를 닮았네']
+        }
+      ]
+    }]
   }
-}
+];
 
 export { Animal, Pomeranian }
