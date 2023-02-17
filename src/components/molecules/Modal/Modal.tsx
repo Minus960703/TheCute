@@ -20,7 +20,7 @@ const Modal = () => {
       document.body.style.overflow = "unset"
     }
   }, [active, content, type, point])
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  
   return (
     <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>
       <div className={styles.background}></div>
@@ -47,3 +47,4 @@ const Modal = () => {
 };
 
 export { Modal };
+

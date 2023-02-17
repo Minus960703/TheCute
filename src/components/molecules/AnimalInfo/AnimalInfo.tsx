@@ -1,15 +1,26 @@
 import React from 'react'
-import { AnimalProps } from '../../../pages/dogs';
+import { AnimalDetailProps, AnimalInfoProps } from '../../../pages/types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import styles from './AnimalInfo.module.scss';
 
-const AnimalInfo = ({ animal }: AnimalProps) => {
-  const animals = [...animal.animals];
+const AnimalInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
+  const { kindAnimals } = animals;
   return (
     <section className={styles.animal__area}>
-      <Title title={animal.title} />
-      {animals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} point={current.point} />)}
+      <Title title={title} />
+      {kindAnimals &&
+        kindAnimals.map((current) => 
+          <AnimalImage 
+            key={current.name}
+            name={current.name}
+            file={current.file}
+            age={current.age}
+            birth={current.birth}
+            gender={current.gender}
+            point={current.point} 
+          />
+      )}
     </section>
   )
 }
