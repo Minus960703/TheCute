@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalInfo } from '../../components/molecules/AnimalInfo';
-import { PomeranianInfo } from '../../components/molecules/PomeranianInfo';
+import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
 import { Animal, Pomeranian } from '../api/dogsInfo';
 import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../types/AnimalType';
 
@@ -19,7 +19,11 @@ const dogsPage =
             (
               current: AnimalDetailProps<AnimalInfoProps>
             ) =>
-            <PomeranianInfo title={current.title} animals={current.animals} />
+            <AnimalTreeInfo
+              key={current.title}
+              title={current.title}
+              animals={current.animals}
+            />
           )
         }
         {animal &&

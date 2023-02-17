@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
-import { PomeranianInfo } from '../../components/molecules/PomeranianInfo';
+import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
 import { Cats } from '../api/catsInfo';
 import { AnimalFamilyProps, AnimalInfoProps, AnimalProps } from '../types/AnimalType';
 
@@ -13,11 +13,12 @@ const catsPage = ({ treeAnimal }: AnimalProps<AnimalFamilyProps<AnimalInfoProps>
         treeAnimal
         && treeAnimal.map(
           (
-            currnet
+            cat
           ) => 
-          <PomeranianInfo
-            title={currnet.title}
-            animals={currnet.animals}
+          <AnimalTreeInfo
+            key={cat.title}
+            title={cat.title}
+            animals={cat.animals}
           />
         )
       }
