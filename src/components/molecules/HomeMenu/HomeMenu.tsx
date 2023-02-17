@@ -5,7 +5,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 
-const HomeMenu = () => {
+interface HomeMenuProps {
+  homeModal: boolean;
+  isActiveArrowBtn: any;
+}
+
+const HomeMenu = ({ homeModal, isActiveArrowBtn }: HomeMenuProps) => {
   const router = useRouter();
   const [menuList, setMenuList] = useState([...MenuList]);
   const { active } = useSelector((state: any) => state.menu);
@@ -24,7 +29,7 @@ const HomeMenu = () => {
     <ul className={active ? `${styles.menu} ${styles.open}` : styles.menu} >
       { menuList
         && menuList.map((current) =>
-          <Link href={current.href} key={current.href}>
+          <Link href={current.href} key={current.href} onClick={()=>homeModal && isActiveArrowBtn()}>
             <li key={current.content} className={router.pathname === current.href ? `${styles.active}` : ''}>
               {current.content}
             </li>

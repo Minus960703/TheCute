@@ -17,25 +17,9 @@ function Home({ response } :any) {
       <SeoHead title='THE 귀여워' />
       <section className='home'>
         <article className='banner'>
-          <Image src={Banner} layout='fill' alt='banner' />
+          <Image src={Banner} layout='fill' alt='banner' priority/>
         </article>
       </section>
-      <style jsx>{`
-        .home {
-          background-color: white;
-          display: flex;
-          width: 100%;
-          height: 100%;
-          flex-wrap: wrap;
-          border-bottom: 1px solid #ccc;
-        }
-        .banner {
-          width: 100%;
-          background-color: #eee;
-          min-height: 275px;
-          height: 40vh;
-        }
-      `}</style>
     </>
   )
 }
