@@ -5,7 +5,7 @@ import { Header } from '../../organisms/Header'
 
 interface LayOutProps {
   children: ReactNode;
-  guide: string;
+  guide?: string;
 }
 
 const Layout = ({children} :LayOutProps) => {

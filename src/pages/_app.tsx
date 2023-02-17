@@ -13,7 +13,7 @@ declare global {
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout >
+    <Layout>
       <Component {...pageProps} />
     </Layout>
   )

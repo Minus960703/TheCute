@@ -3,9 +3,9 @@ import React from 'react'
 import { AnimalDetailProps, AnimalInfoProps } from '../../../pages/types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
-import styles from './PomeranianInfo.module.scss';
+import styles from './AnimalTreeInfo.module.scss';
 
-const PomeranianInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
+const AnimalTreeInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
   const { parentsAnimals, childAnimals } = animals;  
   const router = useRouter();
 
@@ -31,4 +31,4 @@ const PomeranianInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) 
   )
 };
 
-export { PomeranianInfo };
+export { AnimalTreeInfo };
