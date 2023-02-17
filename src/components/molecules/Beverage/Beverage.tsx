@@ -14,7 +14,7 @@ export interface BeverageProps {
 const Beverage = () => {
   const menuItems = BeverageItemList
   const router = useRouter();  
-  console.log(menuItems.filter((current)=>current.category === router.query.type).map((current)=>console.log(current)))
+  // console.log(menuItems.filter((current)=>current.category === router.query.type).map((current)=>console.log(current)))
   return (
     <div className={styles.menu__area}>
       {menuItems
