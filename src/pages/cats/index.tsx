@@ -11,10 +11,15 @@ const catsPage = ({ treeAnimal }: AnimalProps<AnimalFamilyProps<AnimalInfoProps>
       <SeoHead title='THE 귀여워 | 고양이' />
       {
         treeAnimal
-          &&  <PomeranianInfo
-                title={treeAnimal[0].title}
-                animals={treeAnimal[0].animals}
-              />
+        && treeAnimal.map(
+          (
+            currnet
+          ) => 
+          <PomeranianInfo
+            title={currnet.title}
+            animals={currnet.animals}
+          />
+        )
       }
     </section>
   )

@@ -1,19 +1,19 @@
 import { useRouter } from 'next/router';
 import React from 'react'
-import { AnimalFamilyProps, AnimalInfoProps } from '../../../pages/types/AnimalType';
+import { AnimalDetailProps, AnimalInfoProps } from '../../../pages/types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import styles from './PomeranianInfo.module.scss';
 
-const PomeranianInfo = ({ title, animals }: AnimalFamilyProps<AnimalInfoProps>) => {
-  const { parentsAnimals, childAnimals } = animals;
+const PomeranianInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
+  const { parentsAnimals, childAnimals } = animals;  
   const router = useRouter();
 
   return (
     <section className={styles.animal__area}>
       <Title title={title} />
       <div className={styles.family}>
-        {parentsAnimals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} point={current.point} />)}
+        {parentsAnimals && parentsAnimals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} point={current.point} />)}
       </div>
       { title === '포메라니안'
         &&  <div className={styles.path}>
@@ -25,7 +25,7 @@ const PomeranianInfo = ({ title, animals }: AnimalFamilyProps<AnimalInfoProps>) 
             </div>
       }
       <div className={styles.family}>
-        {childAnimals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} point={current.point} />)}
+        {childAnimals && childAnimals.map((current) => <AnimalImage name={current.name} file={current.file} age={current.age} birth={current.birth} gender={current.gender} key={current.name} point={current.point} />)}
       </div>
     </section>
   )

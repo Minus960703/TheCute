@@ -5,14 +5,19 @@ export interface AnimalProps<T> {
 
 export interface AnimalDetailProps<T> {
   title: string;
-  animals: Array<T>;
+  animals: {
+    parentsAnimals?: Array<T>;
+    childAnimals?: Array<T>;
+    kindAnimals?: Array<T>
+  };
 }
 
 export interface AnimalFamilyProps<T> {
   title: string;
   animals: {
-    parentsAnimals: Array<T>;
-    childAnimals: Array<T>;
+    parentsAnimals?: Array<T>;
+    childAnimals?: Array<T>;
+    kindAnimals?: Array<T>
   }
 }
 
