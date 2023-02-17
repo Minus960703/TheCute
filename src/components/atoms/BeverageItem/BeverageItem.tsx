@@ -8,7 +8,7 @@ const BeverageItem = ({ content, image }: BeverageProps) => {
   return (
     <div className={styles.menu__item}>
       <div className={styles.menu__photo}>
-        <Image src={image} layout="fill" alt="Beverage"/>
+        <Image src={image} layout="fill" alt="Beverage" priority/>
       </div>
       <Title title={content} />
     </div>

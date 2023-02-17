@@ -2,7 +2,7 @@ const BeverageItemList = [
   {
     content: '아메리카노 ( ICE / HOT )',
     category: 'coffee',
-    image: 'https://velog.velcdn.com/images/cjw960703/post/90b2af09-ba33-45bb-90bd-17b9cc53800d/image.png'
+    image: 'https://velog.velcdn.com/images/cjw960703/post/25aa3f2a-6b2c-42bf-96f5-29a90b4a873c/image.png'
   },
   {
     content: '카페라떼 ( ICE / HOT )',
@@ -22,12 +22,12 @@ const BeverageItemList = [
   {
     content: '초콜릿 라떼 ( ICE / HOT )',
     category: 'drink',
-    image: 'https://velog.velcdn.com/images/cjw960703/post/dc6a8456-6f9c-4b14-a8fc-6a6c5a4c70eb/image.png'
+    image: 'https://velog.velcdn.com/images/cjw960703/post/55b09f15-a43f-461c-a508-d696e412af8d/image.png'
   },
   {
     content: '아이스티 ( ICE / HOT )',
     category: 'drink',
-    image: 'https://velog.velcdn.com/images/cjw960703/post/7ca32d6a-fd93-4a87-97f3-30232adf4071/image.png'
+    image: 'https://velog.velcdn.com/images/cjw960703/post/373d55b3-b690-42da-aa1f-0f0c16c18349/image.png'
   },
   {
     content: '탄산음료',
@@ -37,7 +37,7 @@ const BeverageItemList = [
   {
     content: '사과 주스',
     category: 'drink',
-    image: 'https://velog.velcdn.com/images/cjw960703/post/e1c64d26-0fe0-403a-9eac-1f08a5a65d2b/image.png'
+    image: 'https://velog.velcdn.com/images/cjw960703/post/9ad1becd-14c4-4e3d-be9a-109249f98e53/image.png'
   },
   {
     content: '레모네이드',

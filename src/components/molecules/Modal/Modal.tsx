@@ -30,9 +30,9 @@ const Modal = () => {
         </button>
         <div className={styles.guide__area}>
           {type === 'guide'
-            ? <Image src={Guide} layout="fill" alt="guide" />
+            ? <Image src={Guide} layout="fill" alt="guide" priority/>
             : content
-              &&  <div>
+              &&  <div style={{height: '100%'}}>
                     <AnimalImage name={name} file={file} birth={birth} age={age} gender={gender} />
                     <div className={styles.point}>
                       {point.map((current: any) => <p key={current}>{current}</p>)}

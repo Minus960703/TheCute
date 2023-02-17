@@ -58,7 +58,7 @@ const Header = () => {
           <BurgerIcon />
         </button>
       </nav>
-      <HomeMenu />
+      <HomeMenu isActiveArrowBtn={isActiveArrowBtn} homeModal={arrowBtn.active} />
       <MobileMenu />
     </header>
   )
