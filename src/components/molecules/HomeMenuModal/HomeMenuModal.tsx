@@ -3,7 +3,7 @@ import styles from './HomeMenuModal.module.scss';
 
 interface HomeMenuModalProps {
   active: boolean;
-  isActiveArrowBtn: any;
+  isActiveArrowBtn: (e: any) => void;
 }
 
 const HomeMenuModal = ({ active, isActiveArrowBtn }: HomeMenuModalProps) => {

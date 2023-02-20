@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react'
 import { BeverageItem } from '../../atoms/BeverageItem';
 import styles from './Beverage.module.scss';
-import { BeverageItemList } from './BeverageObject';
+import { BeverageItemList } from '../../../pages/api/BeverageObject';
 
 export interface BeverageProps {
   content: string;

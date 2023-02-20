@@ -3,12 +3,12 @@ import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalInfo } from '../../components/molecules/AnimalInfo';
 import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
-import { Animal, Pomeranian } from '../api/dogsInfo';
-import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../../types/AnimalType';
+import { Animal, Pomeranian } from '../api/DogsInfo';
+import { AnimalDetailType, AnimalInfoType, AnimalType } from '../../types/AnimalType';
 
 const dogsPage =
   (
-    { animal, treeAnimal }: AnimalProps<AnimalDetailProps<AnimalInfoProps>>
+    { animal, treeAnimal }: AnimalType<AnimalDetailType<AnimalInfoType>>
   ) => {
   return (
     <>
@@ -17,25 +17,25 @@ const dogsPage =
         {treeAnimal &&
           treeAnimal.map(
             (
-              current: AnimalDetailProps<AnimalInfoProps>
+              animal: AnimalDetailType<AnimalInfoType>
             ) =>
             <AnimalTreeInfo
-              key={current.title}
-              title={current.title}
-              animals={current.animals}
+              key={animal.title}
+              title={animal.title}
+              animals={animal.animals}
             />
           )
         }
         {animal &&
           animal.map(
             (
-              current: AnimalDetailProps<AnimalInfoProps>,
+              animal: AnimalDetailType<AnimalInfoType>,
               index: number
             ) =>
             <AnimalInfo
               key={index} 
-              title={current.title}
-              animals={current.animals}
+              title={animal.title}
+              animals={animal.animals}
             />
           )
         }

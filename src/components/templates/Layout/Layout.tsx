@@ -5,13 +5,10 @@ import { Header } from '../../organisms/Header'
 
 interface LayOutProps {
   children: ReactNode;
-  guide?: string;
 }
 
 const Layout = ({children} :LayOutProps) => {
   const router = useRouter();
-  // console.log(guide);
-  // console.log('aaa')
   return (
     <div className='mobile'>
       <Header />
@@ -23,4 +20,4 @@ const Layout = ({children} :LayOutProps) => {
   )
 }
 
-export default Layout;
+export default React.memo(Layout);

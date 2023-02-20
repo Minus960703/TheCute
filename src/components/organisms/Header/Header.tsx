@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { menuSlice } from '../../../redux/menuReducer';
+import { MenuStateType, RootState } from '../../../types/ReducerStateType';
 import { BurgerIcon } from '../../atoms/BurgerIcon';
 import { Icon } from '../../atoms/Icon';
 import { HomeMenu } from '../../molecules/HomeMenu';
@@ -12,14 +12,11 @@ import { HomeMenuModal } from '../../molecules/HomeMenuModal';
 import { MobileMenu } from '../../molecules/MobileMenu';
 import styles from './Header.module.scss';
 
-export interface MenuProps {
-  menu: boolean;
-}
-
 const Header = () => {
   const router = useRouter();
   const [arrowBtn, setArrowBtn] = useState({active: false, content: '강아지'});
-  const { active } = useSelector((state: any)=> state.menu)
+  const { active } = useSelector((state: RootState<MenuStateType>) => state.menu)
+  const dispatch = useDispatch();
   useEffect(() => {
     active
       ? document.body.style.overflow = "hidden"
@@ -28,7 +25,7 @@ const Header = () => {
       document.body.style.overflow = "unset"
     }
   }, [active])
-  const dispatch = useDispatch();
+  
   const isActiveArrowBtn = (content: string = arrowBtn.content) => {
     setArrowBtn(prev => ({ ...prev, active: !prev.active, content: content }))
   }

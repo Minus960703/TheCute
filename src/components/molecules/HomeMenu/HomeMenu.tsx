@@ -1,37 +1,26 @@
-import { useState} from 'react';
-import { MenuList } from './HomeMenuObject';
+import { MenuList } from '../../../pages/api/HomeMenuObject';
 import styles from './HomeMenu.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
+import { MenuStateType, RootState } from '../../../types/ReducerStateType';
 
 interface HomeMenuProps {
   homeModal: boolean;
-  isActiveArrowBtn: any;
+  isActiveArrowBtn: () => void;
 }
 
 const HomeMenu = ({ homeModal, isActiveArrowBtn }: HomeMenuProps) => {
   const router = useRouter();
-  const [menuList, setMenuList] = useState([...MenuList]);
-  const { active } = useSelector((state: any) => state.menu);
-  // const isActiveMenuItem = (id: number) => {
-  //   setMenuList(
-  //     menuList.map(prev =>
-  //       prev.id === id
-  //         ? { ...prev, active: !prev.active }
-  //         : prev.active
-  //           ? { ...prev, active: !prev.active }
-  //           : prev
-  //     )
-  //   )
-  // }
+  const menuList = [...MenuList];
+  const { active } = useSelector((state: RootState<MenuStateType>) => state.menu);
   return (
     <ul className={active ? `${styles.menu} ${styles.open}` : styles.menu} >
       { menuList
-        && menuList.map((current) =>
-          <Link href={current.href} key={current.href} onClick={()=>homeModal && isActiveArrowBtn()}>
-            <li key={current.content} className={router.pathname === current.href ? `${styles.active}` : ''}>
-              {current.content}
+        && menuList.map((menu) =>
+          <Link href={menu.href} key={menu.href} onClick={()=>homeModal && isActiveArrowBtn()}>
+            <li className={router.pathname === menu.href ? `${styles.active}` : ''}>
+              {menu.content}
             </li>
           </Link>
         )

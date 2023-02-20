@@ -5,12 +5,12 @@ interface TitleProps {
   title: string;
 }
 
-const Title = ({ title }: TitleProps) => {
+const Title = React.memo(function ({ title }: TitleProps) {
   return (
     <h2 className={styles.title}>
       {title}
     </h2>
   )
-}
+});
 
 export { Title };

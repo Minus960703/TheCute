@@ -1,4 +1,6 @@
-const BeverageItemList = [
+import { BeverageMenuType } from '../../types/BeverageType';
+
+const BeverageItemList: BeverageMenuType[] = [
   {
     content: '아메리카노 ( ICE / HOT )',
     category: 'coffee',

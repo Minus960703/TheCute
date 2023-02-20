@@ -1,10 +1,10 @@
 import React from 'react'
-import { AnimalDetailProps, AnimalInfoProps } from '../../../types/AnimalType';
+import { AnimalDetailType, AnimalInfoType } from '../../../types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import styles from './AnimalInfo.module.scss';
 
-const AnimalInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
+const AnimalInfo = ({ title, animals }: AnimalDetailType<AnimalInfoType>) => {
   const { kindAnimals } = animals;
   return (
     <section className={styles.animal__area}>

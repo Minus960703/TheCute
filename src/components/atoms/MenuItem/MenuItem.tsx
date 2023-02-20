@@ -2,34 +2,40 @@ import Link from 'next/link';
 import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux';
 import { menuSlice } from '../../../redux/menuReducer';
-import * as modalActions from '../../../redux/modalReducer';
-import { MenuProps } from '../../organisms/Header';
+import { modalSlice } from '../../../redux/modalReducer';
+import { MobileMenuDetail, MobileMenuType } from '../../../types/MobileMenu';
 import { Title } from '../Title';
 import styles from './MenuItem.module.scss';
 
-interface MenuItemProps extends MenuProps {
-  title: string;
-  contents: {
-    content: string;
-    href?: string;
-  }[]
+interface MenuItems extends MobileMenuType {
+  menu: boolean;
 }
 
-const MenuItem = ({ menu, title, contents }: MenuItemProps) => {
+const DetailMenuItem = React.memo(function ({ content, href }: MobileMenuDetail) {
   const dispatch = useDispatch();
-  const isOpenGuide = useCallback(() => {
-    dispatch(modalActions.open({ type: 'guide', content: ''}))
+  const isOpenDetailMenu = useCallback(() => {
+    href 
+      ? dispatch(menuSlice.actions.open())
+      : dispatch(modalSlice.actions.open({ type: 'guide', content: '' }))
   }, [])
+  return (
+    <li onClick={() => isOpenDetailMenu()}>
+      {content}
+    </li>
+  );
+});
+
+const MenuItem = React.memo(function ({ menu, title, contents }: MenuItems) {
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
       <Title title={title} />
       {contents
-        && contents.map((current) => current.href
-          ? <Link href={current.href} key={current.content}><li key={current.content} onClick={() => dispatch(menuSlice.actions.open())}>{current.content}</li></Link>
-          : <li key={current.content} onClick={() => isOpenGuide()}>{current.content}</li>
-      )}
+        && contents.map((menuItem) => menuItem.href
+          ? <Link href={menuItem.href} key={menuItem.content}><DetailMenuItem key={menuItem.content} content={menuItem.content} href={menuItem.href} /></Link>
+          : <DetailMenuItem key={menuItem.content} content={menuItem.content} href={menuItem.href} />
+        )}
     </ul>
   )
-}
+});
 
 export { MenuItem };

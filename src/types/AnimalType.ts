@@ -1,9 +1,9 @@
-export interface AnimalProps<T> {  
+export interface AnimalType<T> {  
   animal?: Array<T>;
   treeAnimal?: Array<T>;
 }
 
-export interface AnimalDetailProps<T> {
+export interface AnimalDetailType<T> {
   title: string;
   animals: {
     parentsAnimals?: Array<T>;
@@ -12,7 +12,7 @@ export interface AnimalDetailProps<T> {
   };
 }
 
-export interface AnimalInfoProps {
+export interface AnimalInfoType {
   name: string;
   file: string;
   age: number;

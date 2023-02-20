@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ModalStateType } from '../types/ReducerStateType';
 
-const initialState = {
+const initialState: ModalStateType = {
   active: false,
   type: '',
   content: ''

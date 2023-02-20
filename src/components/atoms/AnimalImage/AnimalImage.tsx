@@ -1,20 +1,20 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Icon } from '../Icon';
 import styles from './AnimalImage.module.scss';
-import * as modalActions from '../../../redux/modalReducer';
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
-import { AnimalInfoProps } from '../../../types/AnimalType';
+import { AnimalInfoType } from '../../../types/AnimalType';
+import { ModalStateType, RootState } from '../../../types/ReducerStateType';
+import { modalSlice } from '../../../redux/modalReducer';
 
-const AnimalImage = ({ name, file, age, birth, gender, point }: AnimalInfoProps) => {
-  const { active } = useSelector((state: any) => state.modal);
+const AnimalImage = ({ name, file, age, birth, gender, point }: AnimalInfoType) => {
+  const { active } = useSelector((state: RootState<ModalStateType>) => state.modal);
   const dispatch = useDispatch();
   return (
-    <div className={!active ? styles.animal : `${styles.animal} ${styles.open}`} onClick={!active ? ()=>dispatch(modalActions.open({ type: 'info', content: { name, file, age, birth, gender, point }})) : ()=>{}}>
+    <div className={!active ? styles.animal : `${styles.animal} ${styles.open}`} onClick={!active ? ()=>dispatch(modalSlice.actions.open({ type: 'info', content: { name, file, age, birth, gender, point }})) : ()=>{}}>
       <div className={styles.info}>
         <div className={styles.photo}>          
-          <Image src={file} layout="fill" alt={"profile"} className={styles.card} priority/>
+          <Image src={file} layout="fill" alt={name} className={styles.card} priority/>
           <div className={styles.gender}>
             { gender === 'M'
                 ? <Icon icon='MAN' />

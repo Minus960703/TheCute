@@ -1,11 +1,6 @@
-export interface MenuListProps {
-    id: number;
-    content: string;
-    active: boolean;
-    href: string;
-}
+import { HomeMenuType } from '../../types/HomeMenu';
 
-const MenuList: Array<MenuListProps> = [
+const MenuList: HomeMenuType[] = [
     {
         id: 1,
         content: '메뉴',

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react'
+import theCute from 'public/thecutefavicon.png'
 
 interface HeadProps {
   title: string;
@@ -15,7 +16,7 @@ const SeoHead = ({title}: HeadProps) => {
       <meta name="description" content={'더 귀여워 홍대점 강아지 카페'} />
       <meta name="keywords" content={'dog, 강아지, 카페, 홍대, 더귀여워, 더 귀여워, THE 귀여워, 강아지카페, cat, 고양이, 고양이카페'} />
       <meta property="og:title" content={title} />
-      {/* <meta property="og:image" content={post.thumbnail} /> */}
+      {/* <meta property="og:image" content={theCute.toString()} /> */}
       {/* <meta property="og:description" content={post.content} /> */}
     </Head>
   )

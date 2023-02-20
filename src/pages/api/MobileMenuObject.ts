@@ -1,9 +1,12 @@
-const MobileMenuList = [
+import { MobileMenuType } from '../../types/MobileMenu';
+
+const MobileMenuList: MobileMenuType[] = [
   {
     title: '이용안내',
     contents: [
       {
-        content: '이용안내'
+        content: '이용안내',
+        href: null
       }
     ]
   },

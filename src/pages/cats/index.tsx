@@ -2,10 +2,10 @@ import { GetServerSideProps } from 'next';
 import React from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
-import { Cats } from '../api/catsInfo';
-import { AnimalDetailProps, AnimalInfoProps, AnimalProps } from '../../types/AnimalType';
+import { Cats } from '../api/CatsInfo';
+import { AnimalDetailType, AnimalInfoType, AnimalType } from '../../types/AnimalType';
 
-const catsPage = ({ treeAnimal }: AnimalProps<AnimalDetailProps<AnimalInfoProps>>) => {
+const catsPage = ({ treeAnimal }: AnimalType<AnimalDetailType<AnimalInfoType>>) => {
   return (
     <section className='pages'>
       <SeoHead title='THE 귀여워 | 고양이' />

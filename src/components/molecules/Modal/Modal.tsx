@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
 import styles from './Modal.module.scss';
@@ -8,10 +7,12 @@ import Guide from 'public/guide.png';
 import Image from 'next/image';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
+import { ModalStateType, RootState } from '../../../types/ReducerStateType';
+// import { AnimalInfoType } from '../../../types/AnimalType';
 
-const Modal = () => {
-  const { active, content, type } = useSelector((state: any) => state.modal);
-  const { name, file, birth, age, gender, point } = content;
+const Modal = React.memo(function() {
+  const { active, content, type } = useSelector((state: RootState<ModalStateType>) => state.modal);
+  const { name, file, birth, age, gender, point }: any = content;
   useEffect(() => {
     active
       ? document.body.style.overflow = "hidden"
@@ -44,7 +45,7 @@ const Modal = () => {
       </div>
     </section>
   )
-};
+});
 
 export { Modal };
 
