@@ -16,6 +16,10 @@ const nextConfig = {
         source: "/proxy/api/filteringAccommodationList",
         destination: 'https://pokeapi.co/api/v2/pokemon',
       },
+      {
+        source: "/sitemap.xml",
+        destination: '/api/sitemap',
+      }
     ];
   },
   images: {

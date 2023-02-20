@@ -49,4 +49,5 @@ const Cats = [
     }
   }
 ];
+
 export { Cats };
