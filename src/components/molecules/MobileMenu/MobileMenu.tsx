@@ -5,7 +5,7 @@ import styles from './MobileMenu.module.scss';
 import { MobileMenuList } from '../../../pages/api/MobileMenuObject';
 import { MenuStateType, RootState } from '../../../types/ReducerStateType';
 
-const MobileMenu = React.memo(function () {
+const MobileMenu = () => {
   const menuList = [...MobileMenuList];
   const { active } = useSelector((state: RootState<MenuStateType>) => state.menu);
   return (
@@ -13,6 +13,6 @@ const MobileMenu = React.memo(function () {
       {menuList.map((current) => <MenuItem menu={active} title={current.title} contents={current.contents} key={current.title} />)}
     </div>
   )
-});
+};
 
 export { MobileMenu };

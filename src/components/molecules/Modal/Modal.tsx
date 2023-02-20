@@ -8,9 +8,8 @@ import Image from 'next/image';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import { ModalStateType, RootState } from '../../../types/ReducerStateType';
-// import { AnimalInfoType } from '../../../types/AnimalType';
 
-const Modal = React.memo(function() {
+const Modal = () => {
   const { active, content, type } = useSelector((state: RootState<ModalStateType>) => state.modal);
   const { name, file, birth, age, gender, point }: any = content;
   useEffect(() => {
@@ -21,7 +20,7 @@ const Modal = React.memo(function() {
       document.body.style.overflow = "unset"
     }
   }, [active, content, type, point])
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
   return (
     <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>
       <div className={styles.background}></div>
@@ -31,21 +30,21 @@ const Modal = React.memo(function() {
         </button>
         <div className={styles.guide__area}>
           {type === 'guide'
-            ? <Image src={Guide} layout="fill" alt="guide" priority/>
+            ? <Image src={Guide} layout="fill" alt="guide" priority />
             : content
-              &&  <div style={{height: '100%'}}>
-                    <AnimalImage name={name} file={file} birth={birth} age={age} gender={gender} />
-                    <div className={styles.point}>
-                      {point.map((current: any) => <p key={current}>{current}</p>)}
-                    </div>
-                    <Title title='대표사진' />
-                  </div>
+            && <div style={{ height: '100%' }}>
+              <AnimalImage name={name} file={file} birth={birth} age={age} gender={gender} />
+              <div className={styles.point}>
+                {point.map((current: any) => <p key={current}>{current}</p>)}
+              </div>
+              <Title title='대표사진' />
+            </div>
           }
         </div>
       </div>
     </section>
   )
-});
+};
 
 export { Modal };
 

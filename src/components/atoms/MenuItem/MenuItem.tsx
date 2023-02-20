@@ -11,21 +11,21 @@ interface MenuItems extends MobileMenuType {
   menu: boolean;
 }
 
-const DetailMenuItem = React.memo(function ({ content, href }: MobileMenuDetail) {
+const DetailMenuItem = ({ content, href }: MobileMenuDetail) => {
   const dispatch = useDispatch();
-  const isOpenDetailMenu = useCallback(() => {
+  const isOpenDetailMenu = useCallback((href: string | null) => {
     href 
       ? dispatch(menuSlice.actions.open())
       : dispatch(modalSlice.actions.open({ type: 'guide', content: '' }))
   }, [])
   return (
-    <li onClick={() => isOpenDetailMenu()}>
+    <li onClick={() => isOpenDetailMenu(href)}>
       {content}
     </li>
   );
-});
+};
 
-const MenuItem = React.memo(function ({ menu, title, contents }: MenuItems) {
+const MenuItem = ({ menu, title, contents }: MenuItems) => {
   return (
     <ul className={menu ? `${styles.menu} ${styles.open}` : styles.menu}>
       <Title title={title} />
@@ -36,6 +36,6 @@ const MenuItem = React.memo(function ({ menu, title, contents }: MenuItems) {
         )}
     </ul>
   )
-});
+};
 
 export { MenuItem };

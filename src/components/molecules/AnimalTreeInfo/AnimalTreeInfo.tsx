@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import React from 'react'
-import { AnimalDetailProps, AnimalInfoProps } from '../../../types/AnimalType';
+import { AnimalDetailType, AnimalInfoType } from '../../../types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import styles from './AnimalTreeInfo.module.scss';
 
-const AnimalTreeInfo = ({ title, animals }: AnimalDetailProps<AnimalInfoProps>) => {
+const AnimalTreeInfo = ({ title, animals }: AnimalDetailType<AnimalInfoType>) => {
   const { parentsAnimals, childAnimals } = animals;  
   const router = useRouter();
 
