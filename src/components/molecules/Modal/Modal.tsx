@@ -33,12 +33,15 @@ const Modal = () => {
             ? <Image src={Guide} layout="fill" alt="guide" priority />
             : content
             && <div style={{ height: '100%' }}>
-              <AnimalImage name={name} file={file} birth={birth} age={age} gender={gender} />
-              <div className={styles.point}>
-                {point.map((current: any) => <p key={current}>{current}</p>)}
+                <AnimalImage name={name} file={file} birth={birth} age={age} gender={gender} />
+                <div className={styles.point}>
+                  {point.map((current: string) => <p key={current}>{current}</p>)}
+                </div>
+                <Title title='대표사진' />
+                <div className={styles.photo__area}>
+                  {file.map((photo: string) => <div className={styles.photo__item}><Image src={photo} layout='fill' alt='photo' priority/></div>)}
+                </div>
               </div>
-              <Title title='대표사진' />
-            </div>
           }
         </div>
       </div>

@@ -14,7 +14,7 @@ export interface AnimalDetailType<T> {
 
 export interface AnimalInfoType {
   name: string;
-  file: string;
+  file: string[];
   age: number;
   birth: string;
   gender: string;

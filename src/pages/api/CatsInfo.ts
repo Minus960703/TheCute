@@ -5,16 +5,16 @@ const Cats = [
       parentsAnimals: [
         {
           name: '우리',
-          file: 'https://velog.velcdn.com/images/cjw960703/post/c8906acd-c3e2-4e77-848a-31d8c952b232/image.jpg',
-          age: 6,
+          file: ['https://velog.velcdn.com/images/cjw960703/post/3f1cf27e-f11d-46d6-8ce4-79367023b4ea/image.jpg'],
+          age: 7,
           birth: '2016-08-04',
           gender: 'M',
           point: ['우리']
         },
         {
           name: '무만이',
-          file: 'https://velog.velcdn.com/images/cjw960703/post/59938bf6-c2cc-4b3f-8b3f-0927f6e207f4/image.jpg',
-          age: 6,
+          file: ['https://velog.velcdn.com/images/cjw960703/post/9aa00fb1-9fd4-40dd-85df-c8a7f5958fc6/image.jpg'],
+          age: 5,
           birth: '2018-12-25',
           gender: 'W',
           point: ['무만이']
@@ -23,7 +23,7 @@ const Cats = [
       childAnimals: [
         {
           name: '벨리',
-          file: 'https://velog.velcdn.com/images/cjw960703/post/59c29a26-982b-488f-8d49-c1019e6e4d31/image.jpg',
+          file: ['https://velog.velcdn.com/images/cjw960703/post/2e7919fe-a3a2-4c9e-b66b-3d3542a21ef7/image.jpg'],
           age: 3,
           birth: '2020-11-10',
           gender: 'W',
@@ -31,7 +31,7 @@ const Cats = [
         },
         {
           name: '치즈',
-          file: 'https://velog.velcdn.com/images/cjw960703/post/ad6f885a-7be7-4ab3-ae53-d1ca9c8fb8e7/image.jpg',
+          file: ['https://velog.velcdn.com/images/cjw960703/post/8f27b1b6-3bac-4099-a318-a84c04eea85d/image.JPG'],
           age: 3,
           birth: '2020-03-01',
           gender: 'W',
@@ -39,8 +39,8 @@ const Cats = [
         },
         {
           name: '달이',
-          file: 'https://velog.velcdn.com/images/cjw960703/post/33f5de70-fccf-4f64-994b-1bc3b0870312/image.jpg',
-          age: 3,
+          file: ['https://velog.velcdn.com/images/cjw960703/post/61e8fc32-7add-4243-bd61-1119d5817bf7/image.jpg'],
+          age: 1,
           birth: '2022-04-05',
           gender: 'W',
           point: ['#막내']
