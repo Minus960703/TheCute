@@ -39,7 +39,7 @@ const Modal = () => {
                 </div>
                 <Title title='대표사진' />
                 <div className={styles.photo__area}>
-                  {file.map((photo: string) => <div className={styles.photo__item}><Image src={photo} layout='fill' alt='photo' priority/></div>)}
+                  {file.map((photo: string) => <div className={styles.photo__item} key={photo}><Image src={photo} layout='fill' alt='photo' priority/></div>)}
                 </div>
               </div>
           }
