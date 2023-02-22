@@ -1,12 +1,12 @@
 import { GetServerSideProps } from 'next';
-import React from 'react'
+import React, { memo } from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { AnimalInfo } from '../../components/molecules/AnimalInfo';
 import { AnimalTreeInfo } from '../../components/molecules/AnimalTreeInfo';
 import { Animal, Pomeranian } from '../api/DogsInfo';
 import { AnimalDetailType, AnimalInfoType, AnimalType } from '../../types/AnimalType';
 
-const dogsPage =
+const dogsPage = memo(
   (
     { animal, treeAnimal }: AnimalType<AnimalDetailType<AnimalInfoType>>
   ) => {
@@ -19,11 +19,11 @@ const dogsPage =
             (
               animal: AnimalDetailType<AnimalInfoType>
             ) =>
-            <AnimalTreeInfo
-              key={animal.title}
-              title={animal.title}
-              animals={animal.animals}
-            />
+              <AnimalTreeInfo
+                key={animal.title}
+                title={animal.title}
+                animals={animal.animals}
+              />
           )
         }
         {animal &&
@@ -32,17 +32,17 @@ const dogsPage =
               animal: AnimalDetailType<AnimalInfoType>,
               index: number
             ) =>
-            <AnimalInfo
-              key={index} 
-              title={animal.title}
-              animals={animal.animals}
-            />
+              <AnimalInfo
+                key={index}
+                title={animal.title}
+                animals={animal.animals}
+              />
           )
         }
       </section>
     </>
   )
-}
+});
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {

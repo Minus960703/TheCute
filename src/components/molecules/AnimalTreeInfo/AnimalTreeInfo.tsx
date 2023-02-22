@@ -1,14 +1,13 @@
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { memo } from 'react'
 import { AnimalDetailType, AnimalInfoType } from '../../../types/AnimalType';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import styles from './AnimalTreeInfo.module.scss';
 
-const AnimalTreeInfo = ({ title, animals }: AnimalDetailType<AnimalInfoType>) => {
+const AnimalTreeInfo = memo(({ title, animals }: AnimalDetailType<AnimalInfoType>) => {
   const { parentsAnimals, childAnimals } = animals;  
   const router = useRouter();
-
   return (
     <section className={styles.animal__area}>
       <Title title={title} />
@@ -29,6 +28,6 @@ const AnimalTreeInfo = ({ title, animals }: AnimalDetailType<AnimalInfoType>) =>
       </div>
     </section>
   )
-};
+});
 
 export { AnimalTreeInfo };

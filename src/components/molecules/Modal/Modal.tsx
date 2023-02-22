@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
@@ -9,7 +9,7 @@ import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import { ModalStateType, RootState } from '../../../types/ReducerStateType';
 
-const Modal = () => {
+const Modal = memo(() => {
   const { active, content, type } = useSelector((state: RootState<ModalStateType>) => state.modal);
   const { name, file, birth, age, gender, point }: any = content;
   useEffect(() => {
@@ -25,7 +25,7 @@ const Modal = () => {
     <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>
       <div className={styles.background}></div>
       <div className={styles.whiteground}>
-        <button className={styles.btn__close} onClick={() => dispatch(modalSlice.actions.close())}>
+        <button className={styles.btn__close} onClick={()=>dispatch(modalSlice.actions.close())}>
           <Icon icon='CLOSE' />
         </button>
         <div className={styles.guide__area}>
@@ -39,7 +39,7 @@ const Modal = () => {
                 </div>
                 <Title title='대표사진' />
                 <div className={styles.photo__area}>
-                  {file.map((photo: string) => <div className={styles.photo__item} key={photo}><Image src={photo} layout='fill' alt='photo' priority/></div>)}
+                  {file.map((photo: string) => <div className={styles.photo__item} key={photo}><Image src={photo} layout='fill' alt='photo' priority /></div>)}
                 </div>
               </div>
           }
@@ -47,7 +47,7 @@ const Modal = () => {
       </div>
     </section>
   )
-};
+});
 
 export { Modal };
 
