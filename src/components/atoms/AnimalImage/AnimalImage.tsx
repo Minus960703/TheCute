@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Icon } from '../Icon';
 import styles from './AnimalImage.module.scss';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { AnimalInfoType } from '../../../types/AnimalType';
 import { ModalStateType, RootState } from '../../../types/ReducerStateType';
 import { modalSlice } from '../../../redux/modalReducer';

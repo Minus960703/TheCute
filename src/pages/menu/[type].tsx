@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { SeoHead } from '../../components/atoms/SeoHead';
 import { Beverage } from '../../components/molecules/Beverage';
 import { BeverageMenu } from '../../components/molecules/BeverageMenu';
 
-const menuPage = () => {
+const menuPage = memo(() => {
   return (
     <section className='pages'>
       <SeoHead title='THE 귀여워 | 메뉴' />
@@ -11,6 +11,6 @@ const menuPage = () => {
       <Beverage />
     </section>
   )
-}
+})
 
 export default menuPage;

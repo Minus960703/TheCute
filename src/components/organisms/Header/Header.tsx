@@ -26,15 +26,15 @@ const Header = () => {
     }
   }, [active])
   
-  const isActiveArrowBtn = (content: string = arrowBtn.content) => {
-    setArrowBtn(prev => ({ ...prev, active: !prev.active, content: content }))
-  }
+  const isActiveArrowBtn = useCallback((content: string = arrowBtn.content) => {
+    setArrowBtn(prev => ({ ...prev, active: !prev.active, content }))
+  }, [arrowBtn.content])
 
   const isOpenMenuBar = useCallback(() => {
     arrowBtn.active
       && isActiveArrowBtn()
     dispatch(menuSlice.actions.open());
-  }, [])
+  }, [router.pathname, arrowBtn.active])
   
   return (
     <header className='header fixed'>
