@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
@@ -22,21 +22,22 @@ const Modal = () => {
     }
   }, [active, content, type, point])
   const dispatch = useDispatch();
-  const isMoveNextPhoto = () => {
+  const isMoveNextPhoto = useCallback(() => {
     setPhotoNumber((prev) => prev + 1);
     const photoCard = document.querySelector(`.${styles.photo__area}`);
     const photoArea = photoCard && photoCard?.clientWidth * file.length;
+
     console.log(photoCard?.clientWidth);
     console.log(photoArea);
     // console.log(document.querySelector(styles.photo__area)?.clientWidth);
-  }
-  const isMovePrevPhoto = () => {
+  }, [])
+  const isMovePrevPhoto = useCallback(() => {
     setPhotoNumber((prev) => prev - 1);
-  }
-  const isCloseModalPopup = () => {
+  }, [])
+  const isCloseModalPopup = useCallback(() => {
     dispatch(modalSlice.actions.close());
     setPhotoNumber(1);
-  }
+  }, [])
   return (
     <section className={active ? `${styles.modal} ${styles.open}` : styles.modal}>
       <div className={styles.background}></div>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { menuSlice } from '../../../redux/menuReducer';
 import { MenuStateType, RootState } from '../../../types/ReducerStateType';
@@ -30,11 +30,11 @@ const Header = () => {
     setArrowBtn(prev => ({ ...prev, active: !prev.active, content: content }))
   }
 
-  const isOpenMenuBar = () => {
+  const isOpenMenuBar = useCallback(() => {
     arrowBtn.active
       && isActiveArrowBtn()
     dispatch(menuSlice.actions.open());
-  }
+  }, [])
   
   return (
     <header className='header fixed'>
