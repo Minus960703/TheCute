@@ -1,4 +1,3 @@
-// import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react'
 import { BeverageItem } from '../../atoms/BeverageItem';
@@ -13,8 +12,7 @@ export interface BeverageProps {
 
 const Beverage = () => {
   const menuItems = BeverageItemList
-  const router = useRouter();  
-  // console.log(menuItems.filter((current)=>current.category === router.query.type).map((current)=>console.log(current)))
+  const router = useRouter();
   return (
     <div className={styles.menu__area}>
       {menuItems
@@ -27,8 +25,3 @@ const Beverage = () => {
 }
 
 export { Beverage };
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const response = await (await fetch('https://pokeapi.co/api/v2/pokemon')).json();
-//   return { props: { response } };
-// }
