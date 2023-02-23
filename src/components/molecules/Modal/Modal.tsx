@@ -4,7 +4,7 @@ import { modalSlice } from '../../../redux/modalReducer';
 import { Icon } from '../../atoms/Icon';
 import styles from './Modal.module.scss';
 import Guide from 'public/guide.png';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { AnimalImage } from '../../atoms/AnimalImage';
 import { Title } from '../../atoms/Title';
 import { ModalStateType, RootState } from '../../../types/ReducerStateType';
