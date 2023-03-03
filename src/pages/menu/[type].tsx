@@ -6,7 +6,7 @@ import { BeverageMenu } from '../../components/molecules/BeverageMenu';
 const menuPage = memo(() => {
   return (
     <section className='pages'>
-      <SeoHead title='THE 귀여워 | 메뉴' />
+      <SeoHead title='더귀여워 | 메뉴' />
       <BeverageMenu />
       <Beverage />
     </section>
