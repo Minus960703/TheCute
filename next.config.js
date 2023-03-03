@@ -10,14 +10,14 @@ const nextConfig = {
     });
     return config;
   },
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap.xml",
-        destination: '/api/seo/sitemap',
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/sitemap.xml",
+  //       destination: '/api/seo/sitemap',
+  //     },
+  //   ];
+  // },
   images: {
     domains: ['velog.velcdn.com'],
   }
