@@ -13,7 +13,7 @@ const dogsPage = memo(
   return (
     <>
       <section className='pages'>
-        <SeoHead title='THE 귀여워 | 강아지' />
+        <SeoHead title='더귀여워 | 강아지' />
         {treeAnimal &&
           treeAnimal.map(
             (

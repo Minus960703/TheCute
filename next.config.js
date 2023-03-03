@@ -13,12 +13,16 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/proxy/api/filteringAccommodationList",
-        destination: 'https://pokeapi.co/api/v2/pokemon',
+        source: "/sitemap.xml",
+        destination: '/api/seo/sitemap',
       },
       {
-        source: "/sitemap.xml",
-        destination: '/api/sitemap',
+        source: "/naver4ba768d98496a476b43baf6dc3808728.html",
+        destination: '/api/seo/naver'
+      },
+      {
+        source: "/robots.txt",
+        destination: '/api/seo/robots',
       }
     ];
   },

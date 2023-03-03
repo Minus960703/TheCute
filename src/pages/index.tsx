@@ -6,7 +6,7 @@ import Banner from 'public/open.jpg'
 const HomePage = memo(() => {
   return (
     <>
-      <SeoHead title='THE 귀여워' />
+      <SeoHead title='더귀여워' />
       <section className='home'>
         <article className='banner'>
           <Image src={Banner} layout='fill' alt='banner' priority />
