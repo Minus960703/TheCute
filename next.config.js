@@ -16,14 +16,6 @@ const nextConfig = {
         source: "/sitemap.xml",
         destination: '/api/seo/sitemap',
       },
-      {
-        source: "/naver4ba768d98496a476b43baf6dc3808728.html",
-        destination: '/api/seo/naver'
-      },
-      {
-        source: "/robots.txt",
-        destination: '/api/seo/robots',
-      }
     ];
   },
   images: {
