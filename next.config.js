@@ -14,15 +14,15 @@ const nextConfig = {
     return [
       {
         source: "/sitemap.xml",
-        destination: '/seo/sitemap',
+        destination: '/api/seo/sitemap',
       },
       {
         source: "/naver4ba768d98496a476b43baf6dc3808728.html",
-        destination: '/seo/naver'
+        destination: '/api/seo/naver'
       },
       {
         source: "/robots.txt",
-        destination: '/seo/robots',
+        destination: '/api/seo/robots',
       }
     ];
   },

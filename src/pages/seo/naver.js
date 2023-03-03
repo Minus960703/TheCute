@@ -1,1 +1,0 @@
-export default `naver-site-verification: naver4ba768d98496a476b43baf6dc3808728.html`;
